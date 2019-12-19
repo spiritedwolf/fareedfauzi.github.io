@@ -1,5 +1,5 @@
 ---
-title: /fareedfauzi~#
+title: /fareedfauzi
 layout: home
 permalink: /
 ---

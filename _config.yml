@@ -4,11 +4,11 @@
 
 header_pages:
   - index.md
+  - ctfonline.md
   - about.md
   - contact.md
-  - ctfonline.md
 
-footer: 'follow us on <a href="https://twitter.com/fareedfauzi_">twitter</a>'
+footer: 'follow me on <a href="https://twitter.com/fareedfauzi_">twitter</a>'
 
 #style: light # dark (default) or light
 #listen_for_clients_preferred_style: true # true or false (default)

@@ -1,0 +1,4 @@
+---
+title: /resume
+permalink: /resume
+---

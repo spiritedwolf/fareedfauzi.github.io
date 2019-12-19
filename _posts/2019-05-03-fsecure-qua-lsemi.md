@@ -1,11 +1,7 @@
 ---
 title: "F-Secure 2019 Qualification and Semi Final: Write-up"
 date: "2019-04-19"
-layout: single
-comments: true
-share: true
-related: true
-author_profile: true
+layout: post
 ---
 
 Welcome back guys. Today I'm gonna do reverse engineering and steganograpy challenges from FSecure2019. Here the contents :-

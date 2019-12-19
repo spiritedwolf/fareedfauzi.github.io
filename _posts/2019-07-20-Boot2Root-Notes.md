@@ -1,11 +1,7 @@
 ---
 title: " Note: Boot2Root Enumeration based on Ports"
 date: "2019-07-20"
-layout: single
-comments: true
-share: true
-related: true
-author_profile: true
+layout: post
 ---
 
 Hey everyone.

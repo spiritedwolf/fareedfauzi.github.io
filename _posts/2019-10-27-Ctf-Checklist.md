@@ -1,11 +1,7 @@
 ---
 title: "CTF Checklist"
 date: "2019-10-27"
-layout: single
-comments: true
-share: true
-related: true
-author_profile: true
+layout: post
 ---
 
 

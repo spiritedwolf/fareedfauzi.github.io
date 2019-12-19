@@ -1,11 +1,7 @@
 ---
 title: "Malicious CHM (Help) file"
 date: "2019-12-07"
-layout: single
-comments: true
-share: true
-related: true
-author_profile: true
+layout: post
 ---
 
 

@@ -1,11 +1,7 @@
 ---
 title: "i-Hack 2018 Qualification: Reverse and Pwn Write-up"
 date: "2018-12-31"
-layout: single
-comments: true
-share: true
-related: true
-author_profile: true
+layout: post
 ---
 
 This write-up are focus on reverse engineering and pwn category for i-Hack 2018 Qualification.

@@ -1,5 +1,5 @@
 ---
-title: "Online CTF Websites"
+title: "/online_ctf_websites"
 permalink: /ctfonline/
 author_profile: true
 

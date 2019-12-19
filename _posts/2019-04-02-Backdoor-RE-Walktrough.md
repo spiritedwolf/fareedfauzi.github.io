@@ -6,12 +6,6 @@ comments: true
 share: true
 related: true
 author_profile: true
-tags:
-- CTF
-- Backdoor CTF
-- Reverse Engineering
-categories:
-- CTF Write-up
 ---
 
 

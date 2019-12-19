@@ -6,11 +6,6 @@ comments: true
 share: true
 related: true
 author_profile: true
-tags:
-- CTF
-- Boot2root
-categories:
-- Notes
 ---
 
 Hey everyone.

@@ -6,12 +6,6 @@ comments: true
 share: true
 related: true
 author_profile: true
-tags:
-- CTF
-- F-Secure 2019
-- Reverse Engineering
-categories:
-- CTF Write-up
 ---
 
 Welcome back guys. Today I'm gonna do reverse engineering and steganograpy challenges from FSecure2019. Here the contents :-

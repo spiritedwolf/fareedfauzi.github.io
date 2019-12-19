@@ -6,10 +6,6 @@ comments: true
 share: true
 related: true
 author_profile: true
-tags:
-- Malware Analysis
-categories:
-- Notes
 ---
 
 This example is all credit to Mastar fumik0 cause highlighted it at his [blog](https://tracker.fumik0.com/learning). I'm just copy the content (make as a note) and improve it in terms of explanation and structure able to make me (or you guys) more understand the topic. 

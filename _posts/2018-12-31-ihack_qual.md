@@ -6,13 +6,6 @@ comments: true
 share: true
 related: true
 author_profile: true
-tags:
-- CTF
-- i-Hack 2018
-- Pwn
-- Reverse Engineering
-categories:
-- CTF Write-up
 ---
 
 This write-up are focus on reverse engineering and pwn category for i-Hack 2018 Qualification.

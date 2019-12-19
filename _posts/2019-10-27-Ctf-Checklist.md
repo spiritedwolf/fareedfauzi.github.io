@@ -6,10 +6,6 @@ comments: true
 share: true
 related: true
 author_profile: true
-tags:
-- CTF
-categories:
-- Notes
 ---
 
 

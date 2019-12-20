@@ -6,11 +6,11 @@ layout: post
 
 ## Course
 
- 1. [Reverse engineering for beginner by Ophir Harpaz](https://www.begin.re/)
- 2. [Malware Unicorn RE 101](https://malwareunicorn.org/#/workshops)
- 3. [Android RE by Maddie Stone](https://maddiestone.github.io/AndroidAppRE/)
- 4. [Tutorial on reverse engineering by OctopusLabs](https://legend.octopuslabs.io/sample-page.html)
- -   [Lenas Reversing for Newbies](https://tuts4you.com/download.php?list.17)
+-   [Reverse engineering for beginner by Ophir Harpaz](https://www.begin.re/)
+-   [Malware Unicorn RE 101](https://malwareunicorn.org/#/workshops)
+-   [Android RE by Maddie Stone](https://maddiestone.github.io/AndroidAppRE/)
+-   [Tutorial on reverse engineering by OctopusLabs](https://legend.octopuslabs.io/sample-page.html)
+-   [Lenas Reversing for Newbies](https://tuts4you.com/download.php?list.17)
 -   [Open Security Training](http://opensecuritytraining.info/Training.html)
 -   [Dr. Fu's Malware Analysis](http://fumalwareanalysis.blogspot.sg/p/malware-analysis-tutorials-reverse.html)
 -   [Binary Auditing Course](http://www.binary-auditing.com/)
@@ -31,7 +31,7 @@ layout: post
 
 ## Books
 
-- [The IDA Pro Book](http://amzn.com/1593272898)
+-   [The IDA Pro Book](http://amzn.com/1593272898)
 -   [Reverse Engineering for Beginners](http://beginners.re/)
 -   [Assembly Language for Intel-Based Computers (5th Edition)](http://a.co/4OR6I9U)
 -   [Practical Reverse Engineering](http://amzn.com/B00IA22R2Y)
@@ -63,7 +63,7 @@ layout: post
 
 ## YouTube Channels
 
- - [OALabs](https://www.youtube.com/channel/UC--DwaiMV-jtO-6EvmKOnqg)
+-   [OALabs](https://www.youtube.com/channel/UC--DwaiMV-jtO-6EvmKOnqg)
 -   [MalwareTech](https://www.youtube.com/channel/UCLDnEn-TxejaDB8qm2AUhHQ)
 -   [GynvaelEN](https://www.youtube.com/user/GynvaelEN)
 -   [VirusBtn](https://www.youtube.com/user/virusbtn)
@@ -71,12 +71,12 @@ layout: post
 -   [hasherzade](https://www.youtube.com/channel/UCNWVswPNgn5kutPNa5sprkg)
 -   [Colin Hardy](https://www.youtube.com/channel/UCND1KVdVt8A580SjdaS4cZg)
 -   [MalwareAnalysisHedgehog](https://www.youtube.com/channel/UCVFXrUwuWxNlm6UNZtBLJ-A)
-- [Ring Zero Labs](https://www.youtube.com/user/H4rM0n1cH4cK/videos)
-- [ReverseiT](https://www.youtube.com/channel/UCej7jrdKOsjTTi_GuaWFKcA/videos)
-- [Monnapa KA](https://www.youtube.com/channel/UCo6NMoI3r9MiaK0Gj3yIKfw)
-- [Michael Gillespie](https://www.youtube.com/channel/UCDbWhUnMdhxi2bo-oZQ1m3Q)
-- [LiveOverflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/playlists)
-- [Juan Sacco](https://www.youtube.com/channel/UCPeSvDMCjG_kaAhVkxT9t7Q)
+-   [Ring Zero Labs](https://www.youtube.com/user/H4rM0n1cH4cK/videos)
+-   [ReverseiT](https://www.youtube.com/channel/UCej7jrdKOsjTTi_GuaWFKcA/videos)
+-   [Monnapa KA](https://www.youtube.com/channel/UCo6NMoI3r9MiaK0Gj3yIKfw)
+-   [Michael Gillespie](https://www.youtube.com/channel/UCDbWhUnMdhxi2bo-oZQ1m3Q)
+-   [LiveOverflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/playlists)
+-   [Juan Sacco](https://www.youtube.com/channel/UCPeSvDMCjG_kaAhVkxT9t7Q)
 
 ## Exercise, CTF, Practice!
 

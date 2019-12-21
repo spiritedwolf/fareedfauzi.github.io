@@ -80,13 +80,15 @@ layout: post
 
 ## Exercise, CTF, Practice!
 
-- [https://microcorruption.com/](https://microcorruption.com/) - Given a debugger and a device, find an input that unlocks it. Solve the level with that input.
-- [http://reversing.kr/challenge.php](http://reversing.kr/challenge.php) - This site tests your ability to Cracking & Reverse Code Engineering.
-- [https://www.malwaretech.com/beginner-malware-reversing-challenges](https://www.malwaretech.com/beginner-malware-reversing-challenges) - The purpose of these challenges is to familiarize beginners with common malware techniques
-- [https://crackmes.one/](https://crackmes.one/) - This is a simple place where you can download crackmes to improve your reverse engineering skills.
-- [https://challenges.re/](https://challenges.re/) - Well, "challenges" is a loud word, these are rather just exercises for RE.
-- [https://reverse.put.as/crackmes/](https://reverse.put.as/crackmes/) - A collection of crackmes for OS X. Send them to me if you have new ones to add!
-- [https://join.eset.com/en/challenges](https://join.eset.com/en/challenges/crack-me) - If you want to join the team that every day faces global cyber-threats, uncover a hidden puzzle in the crackme program and prove us your potential.
-- [http://flare-on.com/](http://flare-on.com/) - FireEye's challenge RE.
-- [https://ropemporium.com/](https://ropemporium.com/) - Learn return-oriented programming through a series of challenges designed to teach ROP techniques in isolation, with minimal reverse-engineering and bug-hunting.
+| Sites | Description |
+|---|---|
+| [http://flare-on.com/](http://flare-on.com/) |  FireEye's challenge RE.| 
+| [https://microcorruption.com/](https://microcorruption.com/) | Given a debugger and a device, find an input that unlocks it. Solve the level with that input. |
+| [http://reversing.kr/challenge.php](http://reversing.kr/challenge.php) |This site tests your ability to Cracking & Reverse Code Engineering. |
+| [https://www.malwaretech.com/beginner-malware-reversing-challenges](https://www.malwaretech.com/beginner-malware-reversing-challenges) |  The purpose of these challenges is to familiarize beginners with common malware techniques| 
+| [https://crackmes.one/](https://crackmes.one/) |  This is a simple place where you can download crackmes to improve your reverse engineering skills.| 
+| [https://challenges.re/](https://challenges.re/) |  Well, "challenges" is a loud word, these are rather just exercises for RE.| 
+| [https://reverse.put.as/crackmes/](https://reverse.put.as/crackmes/) |  A collection of crackmes for OS X. Send them to me if you have new ones to add!| 
+| [https://join.eset.com/en/challenges](https://join.eset.com/en/challenges/crack-me) |  If you want to join the team that every day faces global cyber-threats, uncover a hidden puzzle in the crackme program and prove us your potential.
+| [https://ropemporium.com/](https://ropemporium.com/)|  Learn return-oriented programming through a series of challenges designed to teach ROP techniques in isolation, with minimal reverse-engineering and bug-hunting.| 
 

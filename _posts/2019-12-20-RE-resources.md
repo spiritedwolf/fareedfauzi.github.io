@@ -3,6 +3,34 @@ title: "Reverse engineering learning resources"
 date: "2019-12-20"
 layout: post
 ---
+## Introduction
+
+Reverse code engineering is it’s an ART of dissecting and rebuild. Understand the inner working of program and its mechanism.
+
+Good guy (hopefully we are) use RCE to :-
+1. Recovery own lost source code
+2. Recovery of data from legacy formats
+3. Malware analysis and research
+4. Security and Vulnerability research
+
+Bad guy use RCE to :-
+1. Reverse engineering competing product and sell it
+2. Crack copy protections
+3. Distribute crack / registration for copyrighted software
+4. Gained unauthorized access to any computer
+
+Required skills and knowledge :-
+
+ 1. Basic computer architecture
+ 2. Operating System
+ 3. Native OS API, Operating Systems Internals (e.g. Windows Internals)
+ 4. C/C++ programming
+ 5. Assembly language programming
+ 6. Executable file format (e.g. Portable Executable (PE))
+ 7. Scripting (Python, Javascript, VB Script)
+ 8. Logic thinking and Research skills
+
+
 
 ## Course
 

@@ -36,7 +36,6 @@ Required skills and knowledge :-
 
 -   [Reverse engineering for beginner by Ophir Harpaz](https://www.begin.re/)
 -   [Malware Unicorn RE 101](https://malwareunicorn.org/#/workshops)
--   [Android RE by Maddie Stone](https://maddiestone.github.io/AndroidAppRE/)
 -   [Tutorial on reverse engineering by OctopusLabs](https://legend.octopuslabs.io/sample-page.html)
 -   [Lenas Reversing for Newbies](https://tuts4you.com/download.php?list.17)
 -   [Open Security Training](http://opensecuritytraining.info/Training.html)
@@ -51,9 +50,13 @@ Required skills and knowledge :-
 -   [RE101](https://securedorg.github.io/RE101/)
 -   [RE102](https://securedorg.github.io/RE102/)
 -   [ARM Assembly Basics](https://azeria-labs.com/writing-arm-assembly-part-1/)
--   [Offensive and Defensive Android Reversing](https://github.com/rednaga/training/raw/master/DEFCON23/O%26D%20-%20Android%20Reverse%20Engineering.pdf)
-- [Introduction to WinDbg by Anand George](https://www.youtube.com/playlist?list=PLhx7-txsG6t6n_E2LgDGqgvJtCHPL7UFu)
-- [Reverse Engineering For Beginners](https://www.youtube.com/watch?v=BRZq5EVQqhg&list=PLMB3ddm5Yvh3gf_iev78YP5EPzkA3nPdL)
+-   [Introduction to WinDbg by Anand George](https://www.youtube.com/playlist?list=PLhx7-txsG6t6n_E2LgDGqgvJtCHPL7UFu)
+-   [Reverse Engineering For Beginners](https://www.youtube.com/watch?v=BRZq5EVQqhg&list=PLMB3ddm5Yvh3gf_iev78YP5EPzkA3nPdL)
+
+## Course (Android)
+- [Android RE by Maddie Stone](https://maddiestone.github.io/AndroidAppRE/)
+- [Offensive and Defensive Android Reversing](https://github.com/rednaga/training/raw/master/DEFCON23/O%26D%20-%20Android%20Reverse%20Engineering.pdf)
+- [Android RE tutorial in Indonesian Language](https://blog.compactbyte.com/2018/05/28/reverse-engineering-apk/)
 
  
 
@@ -105,6 +108,17 @@ Required skills and knowledge :-
 -   [Michael Gillespie](https://www.youtube.com/channel/UCDbWhUnMdhxi2bo-oZQ1m3Q)
 -   [LiveOverflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/playlists)
 -   [Juan Sacco](https://www.youtube.com/channel/UCPeSvDMCjG_kaAhVkxT9t7Q)
+
+## Telegram Channels/Groups
+- [Cutter](https://t.me/r2cutter)
+- [Malware Research](https://t.me/MalwareResearch)
+- [x64dbg](https://t.me/x64dbg)
+- [Ghidra](https://t.me/GhidraRE)
+- [Technical Malware News](https://t.me/TechnicalMalwareNews)
+- [Reverse Engineering](https://t.me/reverseengineeringx)
+- [r0 Crew](https://t.me/R0_Crew)
+- [Malaysian Reversing Group](https://t.me/reversingmy)
+- [Indonesian Reversing Group](https://t.me/reversingid)
 
 ## Exercise, CTF, Practice!
 

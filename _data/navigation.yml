@@ -6,12 +6,12 @@ main:
 #    url: /checklist/
   - title: "/online_ctf_list"
     url: /ctfonline/
-  - title: "/archives"
-    url: /archives/
+  #- title: "/archives"
+  #  url: /archives/
   #- title: "/categories"
   #  url: /categories/
-  #- title: "/tags"
-  #  url: /tags/
+  - title: "/tags"
+    url: /tags/
   - title: "/about"
     url: /about/
   - title: "/resume"

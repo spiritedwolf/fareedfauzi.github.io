@@ -1,7 +1,11 @@
 ---
 title: "Examples of commands used by Attackers (fumik0's note)"
 date: "2019-12-18"
-layout: post
+layout: single
+tags:
+- Malware Analysis
+categories:
+- Notes
 ---
 
 This example is all credit to Mastar fumik0 cause highlighted it at his [blog](https://tracker.fumik0.com/learning). I'm just copy the content (make as a note) and improve it in terms of explanation and structure able to make me (or you guys) more understand the topic. 

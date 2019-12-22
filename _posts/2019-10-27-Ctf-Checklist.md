@@ -1,7 +1,11 @@
 ---
 title: "CTF Checklist"
 date: "2019-10-27"
-layout: post
+layout: single
+tags:
+- CTF
+categories:
+- Notes
 ---
 
 

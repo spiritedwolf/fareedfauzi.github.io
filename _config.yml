@@ -35,7 +35,7 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
+    num_posts            : 10 # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
@@ -107,7 +107,7 @@ author:
   name             : "Fareed Fauzi"
   avatar           : /assets/images/finn.jpg
   bio              : "Interested in RCE and security research"
-  location         : "Kuala Lumpur MY"
+  location         : "Kuala Lumpur, MY"
   email            : fareedradzi@gmail.com
   links:
     - label: "Email"

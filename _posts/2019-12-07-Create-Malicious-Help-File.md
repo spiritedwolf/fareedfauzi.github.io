@@ -1,7 +1,11 @@
 ---
 title: "Malicious CHM (Help) file"
 date: "2019-12-07"
-layout: post
+layout: single
+tags:
+- Malware Analysis
+categories:
+- Blog-post
 ---
 
 

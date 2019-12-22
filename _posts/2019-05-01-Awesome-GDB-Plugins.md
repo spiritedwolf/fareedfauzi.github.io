@@ -2,10 +2,10 @@
 title: "Awesome GDB plug-ins!"
 date: "2019-05-01"
 layout: single
-comments: true
-share: true
-related: true
-author_profile: true
+tags:
+- RE
+categories:
+- Blog-post
 ---
 
 Hey folks. Good morning!

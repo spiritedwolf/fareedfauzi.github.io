@@ -1,7 +1,11 @@
 ---
 title: "Reverse engineering learning resources"
 date: "2019-12-20"
-layout: post
+layout: single
+tags:
+- RE
+categories:
+- Notes
 ---
 ## Introduction
 

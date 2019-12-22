@@ -112,16 +112,16 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: fareedradzi@gmail.com
+      #url: fareedradzi@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://fareedfauzi.githubt.com"
+      #url: "https://fareedfauzi.github.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/fareedfauzi_"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/fareedradzi"
+      #url: "https://facebook.com/fareedradzi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/fareedfauzi"

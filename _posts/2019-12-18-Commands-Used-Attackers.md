@@ -9,8 +9,9 @@ This example is all credit to Mastar fumik0 cause highlighted it at his [blog](h
 
 
 ### attrib
-Function: *//will be add later*
+Function: Used to display or change the file attributes for a file or folder. You can also find and set most file and folder attributes in Explorer.
 
+Reference: [Microsoft attrib manual](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/attrib)
 
 Command  line examples:
 
@@ -21,14 +22,14 @@ Command  line examples:
     attrib -r -a -s -h -i /s C:\Users\%OSUSER%
 
 ### autorun.exe
-Function: *//will be add later*
+Function: A Win32 executable program intended for use with the Windows 95, 98, Me, NT4, 2000, and XP AutoRun facility. This facility (if enabled) will **automatically run an executable** as soon as a CD-ROM is inserted into the CD drive of the computer.
 
 Command  line examples:
 
     autorun.exe "SFXSOURCE:%TEMP%\Temp\chewvga.EXE"
 
-### bcedit
-Function: *//will be add later*
+### bcdedit
+Function: Most ransomware use this command to remove Shadow Volume Copies and disable Windows automatic startup repair. It performs these commands to make it impossible to use the shadow volumes to recover your files.
 
 Command  line examples:
 
@@ -36,7 +37,7 @@ Command  line examples:
     bcdedit /set {default} recoveryenabled No
 
 ### bitsadmin
-Function: *//will be add later*
+Function: Used for managing background intelligent transfer. It can download, copy and execute executable by one line command.
 
 Command  line examples:
 

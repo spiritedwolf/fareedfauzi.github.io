@@ -1,0 +1,18 @@
+# main links
+main:
+  - title: "/home"
+    url: https://fareedfauzi.github.io/
+#  - title: "CTF Checklist 🚩"
+#    url: /checklist/
+  - title: "/online_ctf_list"
+    url: /ctfonline/
+  - title: "/archives"
+    url: /archives/
+  - title: "/categories"
+    url: /categories/
+  - title: "/tags"
+    url: /tags/
+  - title: "/about"
+    url: /about/
+  - title: "/resume"
+    url: /resume/

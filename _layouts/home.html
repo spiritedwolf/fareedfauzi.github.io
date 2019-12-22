@@ -1,17 +1,13 @@
 ---
-layout: default
+layout: archive
 ---
 
 {{ content }}
-{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
 
-{%- if site.posts.size > 0 -%}
-  <ul>
-    {%- for post in site.posts -%}
-    <li>
-      {%- assign date_format = "%Y-%m-%d" -%}
-      [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
-{%- endif -%}
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}

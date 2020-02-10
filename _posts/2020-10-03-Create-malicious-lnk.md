@@ -23,6 +23,7 @@ For nstallation, lnk2pwn requires **python2.7** and **wine** to create a Windows
 You can get the lastest version by clonning this repository:
 
     git clone https://github.com/tommelo/lnk2pwn.git
+
 In lnk2pwn directory, edit config.json. The project contains a template file called config.json that defines the attributes of the .lnk file:
 
     {

@@ -69,6 +69,6 @@ Setup our HTTP server so that evil.exe can be download from HTTP link we give in
 
 ## Pwned by a Shortcut
 
-So, if a user click the `password.txt`(.lnk), they will be infected. Let's wait for a couple of seconds for our evil.exe to be downloaded. And Hooray 🎉. Our `evil.exe` is executed!
+So, if a user click the `password.txt`(.lnk), they will be infected. Let's wait for a couple of seconds for our evil.exe to be downloaded. And Hooray 🎉, our `evil.exe` is executed!
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/mallnk/3.gif)

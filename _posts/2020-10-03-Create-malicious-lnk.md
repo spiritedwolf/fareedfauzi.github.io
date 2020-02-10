@@ -14,8 +14,9 @@ Don't do bad things haa, Allah marah! This is for education and research purpose
 
 ## Malicious Shortcut(.lnk) Generator
 
-So, Lnk2Pwn will help us generate malicious shortcut .lnk
-For nstallation, lnk2pwn requires **python2.7** and **wine** to create a Windows shortcut:
+So, a script name [Lnk2Pwn](https://github.com/tommelo/lnk2pwn) made by Tommello will help us generate malicious shortcut .lnk
+
+For installation, lnk2pwn requires **python2.7** and **wine** to create a Windows shortcut:
 
     sudo apt-get install python2.7
     sudo apt-get install wine
@@ -56,6 +57,7 @@ Now, run this line to generate our malicious .lnk:
 Our lnk file now has been generated. Let's put this malicious .lnk file into our target machine.
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/mallnk/2.PNG)
+
 Looks legit right?
 
 ## Open our HTTP server
@@ -64,8 +66,9 @@ Setup our HTTP server so that evil.exe can be download from HTTP link we give in
     python -m SimpleHTTPServer
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/mallnk/3.PNG)
+
 ## Pwned by a Shortcut
 
-So, if a user click the `password.txt`(.lnk), they will be infected. Hooray 🎉
+So, if a user click the `password.txt`(.lnk), they will be infected. Let's wait for a couple of seconds for our evil.exe to be downloaded. And Hooray 🎉. Our `evil.exe` is executed!
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/mallnk/3.gif)

@@ -3,7 +3,7 @@ title: "Create malicious PDF"
 date: "2020-10-02"
 layout: single
 tags:
-- PDF
+- malicious
 categories:
 - Blog-post
 ---

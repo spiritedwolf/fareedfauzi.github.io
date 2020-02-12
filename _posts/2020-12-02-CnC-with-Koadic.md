@@ -85,6 +85,11 @@ run
 ```
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/7.PNG)
+
+Let's demonstrate in gif format, so you guys can easier to understand the flow. Please zoom-in the gif if you can't see clearly.
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/a.gif)
+
 ## Last but not least
 For stagers, instead of using wmic as our fileless malware, this tool have other option like mshta and etc.
 

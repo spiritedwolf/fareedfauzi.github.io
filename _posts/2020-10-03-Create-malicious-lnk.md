@@ -3,7 +3,7 @@ title: "Create malicious Shortcut .LNK"
 date: "2020-10-03"
 layout: single
 tags:
-- Fileless
+- Malicious
 categories:
 - Blog-post
 ---

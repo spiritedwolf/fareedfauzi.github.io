@@ -103,22 +103,22 @@ You can replace the execution code with anything you want include execution of b
 
 Now we have these files on our machine. So, the next step is to compile this file to generate our chm file.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/maliciouschm/maliciouschm2.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciouschm/maliciouschm2.PNG){: .align-center}
 
 To generate the CHM file. You can do this using "HTML Help Workshop". 
 Download at Official Microsoft website [here](https://www.microsoft.com/en-my/download/details.aspx?id=21138).
 
 Open HTML Help Workshop ---> Go to `File` ---> Click `compile` ---> Choose our `.hhp` file. ---> HTML Help Workshop will compile for us and give us the malicious chm file.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/maliciouschm/maliciouschm11.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciouschm/maliciouschm11.PNG){: .align-center}
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/maliciouschm/maliciouschm3.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciouschm/maliciouschm3.PNG){: .align-center}
 
 Now double click on your help file to check it worked!
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/maliciouschm/maliciouschm4.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciouschm/maliciouschm4.PNG){: .align-center}
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/maliciouschm/maliciouschm5.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciouschm/maliciouschm5.PNG){: .align-center}
 
 Now, our code is successfully execute. It download our binary and then start our malicious binary.
 

@@ -86,7 +86,7 @@ run
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/7.PNG)
 
-Let's demonstrate in gif format, so give clear understanding for the flow of execution. Please zoom-in the gif if you can't see clearly.
+Let's demonstrate all the method in a .gif. Please zoom-in the gif if you can't see clearly.
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/a.gif)
 

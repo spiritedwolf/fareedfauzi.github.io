@@ -8,7 +8,7 @@ categories:
 - Blog-post
 ---
 
-Hey readers. Have you wonder how attacker compromised user and do the "bad things" from their Command and Control (C2) server to zombies (victims) ?
+Hey readers. Have you wonder how attacker compromised user and do the "bad things" from their Command and Control (C2) server to its zombies (victims) ?
 
 In this tutorial, let us be that "attacker" and learn how they do this type of attack using a tool named [Koadic](https://github.com/zerosum0x0/koadic).
 
@@ -49,13 +49,16 @@ For example of delivering payload, you can do technique like [malicious .lnk](ht
 So, after press enter in cmd. The payload should be run.
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/2.PNG)
-Switch back to attacker machine, focus back to our terminal.
+
+Switch back to our kali machine, focus back to our terminal.
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/3.PNG)
+
 You will notice that our target machine now will become our first zombie.
-If we issue command `zombies 0`, it will give information about our first zombie.
+If we issue command `zombies 0`, it will give information about the compromised user (our first zombie).
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/4.PNG)
+
 ## Execute Command using Koadic
 
 Using module `exec_cmd`, we specify the command that we want to execute. In this case, I give `calc.exe` as command that I want to execute.
@@ -71,7 +74,7 @@ And calc.exe will be executed. Hooray 🎉.
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/6.PNG)
 
-We're now controller for our zombies :P
+We're now "king" for our zombies.
 
 Let's try with other command line program.
 
@@ -96,4 +99,4 @@ stager/js/bitsadmin | transfers a .wsf payload containing JScript over a Bitsadm
 
 You can read more in [Koadic repository](https://github.com/zerosum0x0/koadic) readme[.]md .
 
-Thanks for reading!
+That's all. Thanks for reading!

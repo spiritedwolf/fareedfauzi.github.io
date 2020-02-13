@@ -1,6 +1,6 @@
 ---
 title: "Create Command and Control Server with Koadic"
-date: "2020-10-03"
+date: "2020-02-12"
 layout: single
 tags:
 - Fileless

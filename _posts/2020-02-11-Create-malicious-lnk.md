@@ -1,6 +1,6 @@
 ---
 title: "Create malicious Shortcut .LNK"
-date: "2020-10-03"
+date: "2020-02-11"
 layout: single
 tags:
 - Malicious

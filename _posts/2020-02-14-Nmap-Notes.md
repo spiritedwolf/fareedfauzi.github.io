@@ -9,6 +9,8 @@ categories:
 - Notes
 ---
 
+This note tend to compile all nmap useful command line that will be useful for HTB, VulnHub, PWK labs and OSCP exam.
+
 ## Scan for alive hosts
 
 First of all, we need to know what boxes exist on the network.

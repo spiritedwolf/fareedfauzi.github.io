@@ -104,4 +104,13 @@ stager/js/bitsadmin | transfers a .wsf payload containing JScript over a Bitsadm
 
 You can read more in [Koadic repository](https://github.com/zerosum0x0/koadic) readme[.]md .
 
+# Last one again
+I try this technique in Windows 10 with Defender protection turn on.
+
+And defender blocked the file-less command line.
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/cnc/8.PNG)
+
+Users need to move on from Windows XP and 7 to Win10 as precautionary measures if users don't have plan to buy any Anti Virus products for their old Windows version. 👍
+
 That's all. Thanks for reading!

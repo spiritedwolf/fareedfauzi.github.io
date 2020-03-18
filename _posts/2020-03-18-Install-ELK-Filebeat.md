@@ -23,6 +23,7 @@ Add java_home:
 ```
 JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/"
 ```
+Change *java-11-openjdk-amd64* to your java path. Try ``ls /usr/lib/jvm/`` on the terminal to check the java directory.
 
 Now reload this file to apply the changes to your current session:
 

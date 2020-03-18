@@ -8,7 +8,7 @@ categories:
 - Blog-post
 ---
 
-This installation for Ubuntu Desktop. For Cloud Ubuntu Server, the method is a bit different. Go to my reference and check it out the tutorial because this tutorial is based on those websites.
+This installation for Ubuntu Desktop. For Cloud Ubuntu Server, the method is a bit different. Go to the reference at the bottom of this post and check out those tutorial websites.
 
 ## Install software requirement
 
@@ -218,7 +218,8 @@ We will start and enable Filebeat:
 You're good to go now! ❤️
 
 Reference:
-1. https://www.fosslinux.com/6084/how-to-install-elk-stack-on-ubuntu-18-04.htm
-2. https://www.linuxcloudvps.com/blog/how-to-install-elk-stack-on-ubuntu-18-04/
-3. https://www.fosstechnix.com/install-elk-stack-on-ubuntu/
-4. https://linuxconfig.org/install-elk-on-ubuntu-18-04-bionic-beaver-linux
+1. [https://www.fosslinux.com/6084/how-to-install-elk-stack-on-ubuntu-18-04.htm](https://www.fosslinux.com/6084/how-to-install-elk-stack-on-ubuntu-18-04.htm)
+2. [https://www.linuxcloudvps.com/blog/how-to-install-elk-stack-on-ubuntu-18-04/](https://www.linuxcloudvps.com/blog/how-to-install-elk-stack-on-ubuntu-18-04/)
+3. [https://www.fosstechnix.com/install-elk-stack-on-ubuntu/](https://www.fosstechnix.com/install-elk-stack-on-ubuntu/)
+4. [https://linuxconfig.org/install-elk-on-ubuntu-18-04-bionic-beaver-linux](https://linuxconfig.org/install-elk-on-ubuntu-18-04-bionic-beaver-linux)
+5. [https://www.lahilabs.com/2020/01/02/how-to-install-elk-siem-for-beginners-complete-guide/](https://www.lahilabs.com/2020/01/02/how-to-install-elk-siem-for-beginners-complete-guide/)

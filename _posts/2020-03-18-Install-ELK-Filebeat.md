@@ -155,7 +155,15 @@ Let’s enable Logstash on boot and start the service:
 
 To install filebeat:
 
-``sudo apt-get install filebeat``
+```
+apt update
+apt upgrade
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
+apt-get install apt-transport-https
+apt update
+sudo apt-get install filebeat
+```
 
 Now lets make changes in below configuration file
 

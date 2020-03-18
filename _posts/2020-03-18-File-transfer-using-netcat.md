@@ -25,6 +25,8 @@ After that, in the sender machine:
 cd directoryOfTheFile
 nc 192.168.0.x 1234 < filename.txt
 ```
+Replace ``192.168.0.x`` with the sender IP.
+
 The filename should be the file you want to send. Example here we will send ``filename.txt``.
 
 Now, the file should be transfered successfully.

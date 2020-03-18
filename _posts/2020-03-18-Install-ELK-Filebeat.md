@@ -8,8 +8,6 @@ categories:
 - Blog-post
 ---
 
-# ELK Filebeat setup and installation for local Ubuntu 18.04
-
 This installation for Ubuntu Desktop. For Cloud Ubuntu Server, the method is a bit different. Go to my reference and check it out the tutorial because this tutorial is based on those websites.
 
 ## Install software requirement

@@ -23,7 +23,7 @@ This command will start listening ``-l`` on port ``-p`` 1234.
 After that, in the sender machine:
 ```
 cd directoryOfTheFile
-nc 192.168.0.x 1234 < filename.txt
+nc -w 3 192.168.0.x 1234 < filename.txt
 ```
 Replace ``192.168.0.x`` with the sender IP.
 

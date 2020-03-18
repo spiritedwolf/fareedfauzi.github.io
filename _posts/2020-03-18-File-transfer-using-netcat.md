@@ -11,7 +11,7 @@ Netcat is a featured networking utility which reads and writes data across netwo
 
 Netcat works across all platforms (Windows,Mac OS X, Linux). One of the feature is transfering file to another host. To transfer file using this tool, make sure sender and receiver has connection. You can check the connection by pinging to each other.
 
-### Receiver
+### Receiver / Destination
 On receiver machine, issue this command to listen for the connection that sender will send after this:
 ```
 nc -l -p 1234 > yourfilename
@@ -19,11 +19,11 @@ nc -l -p 1234 > yourfilename
 The filename could be anything. 
 This command will start listening ``-l`` on port ``-p`` 1234.
 
-### Sender
+### Sender / Source
 After that, in the sender machine:
 ```
 cd directoryOfTheFile
-nc -w 3 192.168.0.x 1234 < filename.txt
+nc 192.168.0.x 1234 < filename.txt
 ```
 The filename should be the file you want to send. Example here we will send ``filename.txt``.
 

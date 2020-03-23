@@ -16,6 +16,8 @@ This installation for Ubuntu Desktop. For Cloud Ubuntu Server, the method is a b
 
 ## Configuring Java
 
+Follow this website: https://www.hostinger.my/tutorials/install-java-ubuntu
+
 Add java_home:
 
 ``nano /etc/environment``

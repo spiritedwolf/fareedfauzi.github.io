@@ -47,9 +47,10 @@ Mdify *elasticsearch.yml* file:
 
 ``nano /etc/elasticsearch/elasticsearch.yml``
 
-Uncomment *network.host* and *http.port*. Following configuration should be added:
+Uncomment *network.host* and *http.port* and do some changes and addition. Following configuration should be added:
 ```
-network.host: localhost
+network.host: 0.0.0.0
+transport.tcp.port: 9300
 http.port: 9200
 ```
 
@@ -88,7 +89,7 @@ Modify Kibana settings:
 Uncomment following lines:
 ```
 server.port: 5601
-server.host: "localhost"
+server.host: "0.0.0.0"
 elasticsearch.url: "http://localhost:9200"
 ```
 
@@ -193,14 +194,14 @@ In the configuration file got ElasticSearch Section as shown below:
 ```
 #-------------------------- Elasticsearch output ------------------------------
 # uncommnet the hosts section
-hosts: ["localhost:9200"]
+hosts: ["<IP of server>:9200"]
 ```
 
 Uncomment the Logstash output:
 ```
 output.logstash:
 # The Logstash hosts
-hosts: ["localhost:5044"]
+hosts: ["<IP of server>:5044"]
 Start and enable Filebeat
 ```
 

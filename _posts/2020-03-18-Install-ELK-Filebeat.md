@@ -236,3 +236,4 @@ Reference:
 3. [https://www.fosstechnix.com/install-elk-stack-on-ubuntu/](https://www.fosstechnix.com/install-elk-stack-on-ubuntu/)
 4. [https://linuxconfig.org/install-elk-on-ubuntu-18-04-bionic-beaver-linux](https://linuxconfig.org/install-elk-on-ubuntu-18-04-bionic-beaver-linux)
 5. [https://www.lahilabs.com/2020/01/02/how-to-install-elk-siem-for-beginners-complete-guide/](https://www.lahilabs.com/2020/01/02/how-to-install-elk-siem-for-beginners-complete-guide/)
+6. [https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04)

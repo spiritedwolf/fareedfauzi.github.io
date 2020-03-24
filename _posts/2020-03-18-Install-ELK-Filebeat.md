@@ -75,7 +75,7 @@ Check installation
 
 ``curl localhost:9200/?pretty``
 
-### Installing and Configuring Kibana
+## Installing and Configuring Kibana
 
 Install:
 
@@ -102,7 +102,7 @@ Enable it on boot and start Kibana service:
 
 Go to this url *localhost:5601* to view Kibana dashboard
 
-### Installing and Configuring Logstash
+## Installing and Configuring Logstash
 Install Logstash:
 
 ``sudo apt-get install logstash``

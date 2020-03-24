@@ -25,15 +25,7 @@ apt-get update
 apt-get install oracle-java14-installer
 ```
 
-Check java home
 
-``echo $JAVA_HOME``
-
-Edit and uncomment this part in ``/etc/default/elasticsearch`` to
-
-```
-JAVA_HOME=/usr/lib/jvm/java-14-oracle
-```
 
 ## Installing and Configuring Elasticsearch
 
@@ -59,6 +51,16 @@ Uncomment *network.host* and *http.port*. Following configuration should be adde
 ```
 network.host: localhost
 http.port: 9200
+```
+
+Check java home
+
+``echo $JAVA_HOME``
+
+Edit and uncomment this part in ``/etc/default/elasticsearch`` to
+
+```
+JAVA_HOME=/usr/lib/jvm/java-14-oracle
 ```
 
 Enable and start elastic search:

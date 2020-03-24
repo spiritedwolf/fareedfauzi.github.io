@@ -18,22 +18,22 @@ This installation for Ubuntu Desktop. For Cloud Ubuntu Server, the method is a b
 
 Follow this website: https://www.hostinger.my/tutorials/install-java-ubuntu
 
-Add java_home:
-
-``nano /etc/environment``
-
 ```
-JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/"
+apt-get update && apt-get upgrade
+add-apt-repository ppa:linuxuprising/java
+apt-get update
+apt-get install oracle-java14-installer
 ```
-Change *java-11-openjdk-amd64* to your java path. Try ``ls /usr/lib/jvm/`` on the terminal to check the java directory.
-
-Now reload this file to apply the changes to your current session:
-
-`` source /etc/environment ``
 
 Check java home
 
 ``echo $JAVA_HOME``
+
+Edit and uncomment this part in ``/etc/default/elasticsearch`` to
+
+```
+JAVA_HOME=/usr/lib/jvm/java-14-oracle
+```
 
 ## Installing and Configuring Elasticsearch
 

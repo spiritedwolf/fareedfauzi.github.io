@@ -8,11 +8,10 @@ categories:
 - Blog-post
 ---
 
-This installation for Ubuntu Desktop. For Cloud Ubuntu Server, the method is a bit different. Go to the reference at the bottom of this post and check out those tutorial websites.
 
 ## Install software requirement
 
-``apt install openjdk-8-jre apt-transport-https wget nginx``
+``apt install apt-transport-https wget``
 
 ## Configuring Java
 
@@ -25,23 +24,24 @@ apt-get update
 apt-get install oracle-java14-installer
 ```
 
+## Install ELK in one bash script
+```
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+sudo apt-get update
+apt-get install elasticsearch -y
+apt-get install kibana -y
+sudo apt-get install logstash -y
+```
 
+## To start all service (Run this command when you've done config)
+```
+systemctl start elasticsearch.service
+systemctl start kibana.service
+systemctl start logstash.service
+```
 
-## Installing and Configuring Elasticsearch
-
-Download Elasticsearch followed by public signing key:
-
-``wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -``
-
-Add repository:
-
-``echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list``
-
-Update the repo list and install the package:
-
-``sudo apt-get update``
-
-``sudo apt-get install elasticsearch -y``
+## Configuring Elasticsearch
 
 Mdify *elasticsearch.yml* file:
 
@@ -66,21 +66,17 @@ JAVA_HOME=/usr/lib/jvm/java-14-oracle
 
 Enable and start elastic search:
 
-``sudo systemctl enable elasticsearch.service``
-
-``sudo systemctl start elasticsearch.service``
-
-``sudo systemctl status elasticsearch``
+```
+sudo systemctl enable elasticsearch.service
+sudo systemctl start elasticsearch.service
+sudo systemctl status elasticsearch
+```
 
 Check installation
 
 ``curl localhost:9200/?pretty``
 
-## Installing and Configuring Kibana
-
-Install:
-
-``apt-get install kibana``
+## Configuring Kibana
 
 Modify Kibana settings:
 
@@ -95,18 +91,15 @@ elasticsearch.url: "http://localhost:9200"
 
 Enable it on boot and start Kibana service:
 
-``sudo systemctl enable kibana.service``
-
-``sudo systemctl start kibana.service``
-
-``sudo systemctl status kibana.service``
+```
+sudo systemctl enable kibana.service
+sudo systemctl start kibana.service
+sudo systemctl status kibana.service
+```
 
 Go to this url *localhost:5601* to view Kibana dashboard
 
-## Installing and Configuring Logstash
-Install Logstash:
-
-``sudo apt-get install logstash``
+## Configuring Logstash
 
 To load logstash beat create the below config file and insert below lines:
 
@@ -114,43 +107,34 @@ To load logstash beat create the below config file and insert below lines:
 
 ```
 input {
-
   beats {
-
     port => 5044
-
   }
-
 }
 ```
+
+(This part is based on yr requirement)
 Create the configuration file and insert below lines:
 
 ``sudo nano /etc/logstash/conf.d/30-elasticsearch-output.conf``
 
 ```
 output {
-
   elasticsearch {
-
     hosts => ["localhost:9200"]
-
     manage_template => false
-
     index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"
-
   }
-
 }
 ```
 
 Let’s enable Logstash on boot and start the service:
 
-``sudo systemctl enable logstash.service``
-
-``sudo systemctl start logstash.service``
-
-``sudo systemctl status logstash.service``
-
+```
+sudo systemctl enable logstash.service
+sudo systemctl start logstash.service
+sudo systemctl status logstash.service
+```
 
 # Filebeat setup and installation for Client
 
@@ -220,11 +204,11 @@ enabled: true
 
 We will start and enable Filebeat:
 
-``systemctl start filebeat``
-
-``systemctl enable filebeat``
-
-``systemctl status filebeat``
+```
+systemctl start filebeat
+systemctl enable filebeat
+systemctl status filebeat
+```
 
 ---
 

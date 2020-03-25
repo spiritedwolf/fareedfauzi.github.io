@@ -31,7 +31,7 @@ echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee 
 sudo apt-get update
 apt-get install elasticsearch -y
 apt-get install kibana -y
-sudo apt-get install logstash -y
+apt-get install logstash -y
 ```
 
 ## To start all service (Run this command when you've done config)

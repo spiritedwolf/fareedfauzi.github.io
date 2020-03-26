@@ -103,7 +103,7 @@ Go to this url *localhost:5601* to view Kibana dashboard
 
 To load logstash beat create the below config file and insert below lines:
 
-``sudo nano /etc/logstash/conf.d/02-beats-input.conf``
+``sudo nano /etc/logstash/conf.d/beats-input.conf``
 
 ```
 input {
@@ -140,18 +140,17 @@ sudo systemctl status logstash.service
 
 ---
 
+As example we gonna setup syslog logging.
+
+Go to Kibana home > Logging > add log data > system logs. And follow the steps for DEB.
+
 ## Install and Configure Filebeat
 
 To install filebeat:
 
 ```
-apt update
-apt upgrade
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
-apt-get install apt-transport-https
-apt update
-sudo apt-get install filebeat
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.7-amd64.deb
+sudo dpkg -i filebeat-6.8.7-amd64.deb
 ```
 
 Now lets make changes in below configuration file
@@ -181,14 +180,6 @@ In the configuration file got ElasticSearch Section as shown below:
 hosts: ["<IP of server>:9200"]
 ```
 
-Uncomment the Logstash output:
-```
-output.logstash:
-# The Logstash hosts
-hosts: ["<IP of server>:5044"]
-Start and enable Filebeat
-```
-
 To enable Filebeat modules, we need to edit the “filebeat.reference.yml” configuration file:
 
 ``nano /etc/filebeat/filebeat.reference.yml``
@@ -202,13 +193,30 @@ syslog:
 enabled: true
 ```
 
-We will start and enable Filebeat:
+Enable and configure the system module
+```
+filebeat modules enable system
+```
+Edit ``/etc/filebeat/modules.d/system.yml``
 
 ```
-systemctl start filebeat
-systemctl enable filebeat
-systemctl status filebeat
+- module: system
+  syslog:
+    enabled: true
+    var.paths: ["/var/log/syslog*"]
+  auth:
+    enabled: true
+    var.paths: ["/var/log/auth.log*"]
 ```
+
+We will start and enable Filebeat:
+The setup command loads the Kibana dashboards. If the dashboards are already set up, omit this command.
+
+```
+sudo filebeat setup
+sudo service filebeat start #or restart if you have start before
+```
+Click "Check data" to ensure elastic have fetch our syslog. Now go to dashboard panel. Restart and set Time Range to "Today" 
 
 ---
 

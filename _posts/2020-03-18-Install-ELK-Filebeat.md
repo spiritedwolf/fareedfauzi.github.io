@@ -34,13 +34,6 @@ apt-get install kibana -y
 apt-get install logstash -y
 ```
 
-## To start all service (Run this command when you've done config)
-```
-systemctl start elasticsearch.service
-systemctl start kibana.service
-systemctl start logstash.service
-```
-
 ## Configuring Elasticsearch
 
 Mdify *elasticsearch.yml* file:
@@ -134,6 +127,13 @@ Let’s enable Logstash on boot and start the service:
 sudo systemctl enable logstash.service
 sudo systemctl start logstash.service
 sudo systemctl status logstash.service
+```
+
+## To start all service (Run this command when you've done config)
+```
+systemctl start elasticsearch.service
+systemctl start kibana.service
+systemctl start logstash.service
 ```
 
 # Filebeat setup and installation for Client

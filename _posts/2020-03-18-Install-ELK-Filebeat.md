@@ -329,7 +329,7 @@ f. Try to execute some executables that Cyseca blocked and see the log at ``cyse
 $ sudo cat /var/log/cyseca.log
 ``` 
 
-If the file doesnt exist, try to repeat step 4 - 6 again.
+If the file doesnt exist, try to repeat step d - f again.
 
 
 

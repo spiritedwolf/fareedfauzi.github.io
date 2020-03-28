@@ -11,7 +11,9 @@ categories:
 
 ## Install software requirement
 
-``apt install apt-transport-https wget``
+```
+$ apt install apt-transport-https wget curl
+```
 
 ## Configuring Java
 
@@ -36,9 +38,11 @@ apt-get install logstash -y
 
 ## Configuring Elasticsearch
 
-Mdify *elasticsearch.yml* file:
+Modify *elasticsearch.yml* file:
 
-``nano /etc/elasticsearch/elasticsearch.yml``
+```
+$ nano /etc/elasticsearch/elasticsearch.yml
+```
 
 Uncomment *network.host* and *http.port* and do some changes and addition. Following configuration should be added:
 ```
@@ -60,20 +64,24 @@ JAVA_HOME=/usr/lib/jvm/java-14-oracle
 Enable and start elastic search:
 
 ```
-sudo systemctl enable elasticsearch.service
-sudo systemctl start elasticsearch.service
-sudo systemctl status elasticsearch
+$ sudo systemctl enable elasticsearch.service
+$ sudo systemctl start elasticsearch.service
+$ sudo systemctl status elasticsearch
 ```
 
 Check installation
 
-``curl localhost:9200/?pretty``
+```
+$ curl localhost:9200/?pretty
+```
 
 ## Configuring Kibana
 
 Modify Kibana settings:
 
-``nano /etc/kibana/kibana.yml``
+```
+$ sudo nano /etc/kibana/kibana.yml
+```
 
 Uncomment following lines:
 ```
@@ -85,9 +93,9 @@ elasticsearch.url: "http://localhost:9200"
 Enable it on boot and start Kibana service:
 
 ```
-sudo systemctl enable kibana.service
-sudo systemctl start kibana.service
-sudo systemctl status kibana.service
+$ sudo systemctl enable kibana.service
+$ sudo systemctl start kibana.service
+$ sudo systemctl status kibana.service
 ```
 
 Go to this url *localhost:5601* to view Kibana dashboard
@@ -96,7 +104,9 @@ Go to this url *localhost:5601* to view Kibana dashboard
 
 To load logstash beat create the below config file and insert below lines:
 
-``sudo nano /etc/logstash/conf.d/beats-input.conf``
+```
+$ sudo nano /etc/logstash/conf.d/beats-input.conf
+```
 
 ```
 input {
@@ -109,7 +119,9 @@ input {
 (This part is based on yr requirement)
 Create the configuration file and insert below lines:
 
-``sudo nano /etc/logstash/conf.d/30-elasticsearch-output.conf``
+```
+$ sudo nano /etc/logstash/conf.d/30-elasticsearch-output.conf
+```
 
 ```
 output {
@@ -124,16 +136,16 @@ output {
 Let’s enable Logstash on boot and start the service:
 
 ```
-sudo systemctl enable logstash.service
-sudo systemctl start logstash.service
-sudo systemctl status logstash.service
+$ sudo systemctl enable logstash.service
+$ sudo systemctl start logstash.service
+$ sudo systemctl status logstash.service
 ```
 
 ## To start all service (Run this command when you've done config)
 ```
-systemctl start elasticsearch.service
-systemctl start kibana.service
-systemctl start logstash.service
+$ sudo systemctl start elasticsearch.service
+$ sudo systemctl start kibana.service
+$ sudo systemctl start logstash.service
 ```
 
 # Filebeat setup and installation for Client
@@ -149,13 +161,15 @@ Go to Kibana home > Logging > add log data > system logs. And follow the steps f
 To install filebeat:
 
 ```
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.7-amd64.deb
-sudo dpkg -i filebeat-6.8.7-amd64.deb
+$ curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.7-amd64.deb
+$ sudo dpkg -i filebeat-6.8.7-amd64.deb
 ```
 
 Now lets make changes in below configuration file
 
-``sudo nano /etc/filebeat/filebeat.yml``
+```
+$ sudo nano /etc/filebeat/filebeat.yml
+```
 
 In the configuration file go to Filebeat Section change false to true as shown below :
 ```
@@ -182,7 +196,9 @@ hosts: ["<IP of server>:9200"]
 
 To enable Filebeat modules, we need to edit the “filebeat.reference.yml” configuration file:
 
-``nano /etc/filebeat/filebeat.reference.yml``
+```
+$ sudo nano /etc/filebeat/filebeat.reference.yml
+```
 
 We will enable the syslog system module for Filebeat:
 
@@ -195,7 +211,7 @@ enabled: true
 
 Enable and configure the system module
 ```
-filebeat modules enable system
+$ filebeat modules enable system
 ```
 Edit ``/etc/filebeat/modules.d/system.yml``
 
@@ -213,23 +229,29 @@ We will start and enable Filebeat:
 The setup command loads the Kibana dashboards. If the dashboards are already set up, omit this command.
 
 ```
-sudo filebeat setup
-sudo service filebeat start #or restart if you have start before
+$ sudo filebeat setup
+$ sudo service filebeat start #or restart if you have start before
 ```
 Click "Check data" to ensure elastic have fetch our syslog. Now go to dashboard panel. Restart and set Time Range to "Today" 
 
 ## Optional: This part is for Cyseca logging (for my task note, you can ignore this)
-1. In ELK/SIEM server, install syslog-ng first
+a. In ELK/SIEM server, install syslog-ng first
 
-``$ sudo apt install syslog-ng``
+```
+$ sudo apt install syslog-ng
+```
 
-2. Copy original configuration to ``.bak`` to backup original conf file (in case we messed up). 
+b. Copy original configuration to ``.bak`` to backup original conf file (in case we messed up). 
 
-Use this command ``sudo cp /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf.bak``
+```
+$ sudo cp /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf.bak
+```
 
-3. Edit config file of syslog-ng
+c. Edit config file of syslog-ng
 
-``$ sudo nano /etc/syslog-ng/syslog-ng.conf``
+```
+$ sudo nano /etc/syslog-ng/syslog-ng.conf
+```
 
 Uncomment this line in "Sources" part
 
@@ -289,13 +311,17 @@ log { source(net); destination(remote); };
 
 Save the conf file.
 
-4. Restart syslog-ng using ``sudo systemctl restart syslog-ng``
+d. Restart syslog-ng using
 
-5. In Cyseca Dashboard. Update the logging configuration like below:-
+```
+sudo systemctl restart syslog-ng
+``
+
+e. In Cyseca Dashboard. Update the logging configuration like below:-
 
 ![syslog config](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/syslog.PNG)
 
-6. Try to execute some executables that Cyseca blocked and see the log at ``cyseca.log`` using ``sudo cat /var/log/cyseca.log``. 
+f. Try to execute some executables that Cyseca blocked and see the log at ``cyseca.log`` using ``sudo cat /var/log/cyseca.log``. 
 
 If the file doesnt exist, try to repeat step 4 - 6 again.
 

@@ -12,7 +12,7 @@ categories:
 ## Install software requirement
 
 ```
-$ apt install apt-transport-https wget curl
+$ sudo apt install apt-transport-https wget curl
 ```
 
 ## Configuring Java
@@ -20,10 +20,10 @@ $ apt install apt-transport-https wget curl
 Follow this website: https://www.hostinger.my/tutorials/install-java-ubuntu
 
 ```
-apt-get update && apt-get upgrade
-add-apt-repository ppa:linuxuprising/java
-apt-get update
-apt-get install oracle-java14-installer
+sudo apt-get update && apt-get upgrade
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt-get update
+sudo apt-get install oracle-java14-installer
 ```
 
 ## Install ELK in one bash script
@@ -31,9 +31,9 @@ apt-get install oracle-java14-installer
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 sudo apt-get update
-apt-get install elasticsearch -y
-apt-get install kibana -y
-apt-get install logstash -y
+sudo apt-get install elasticsearch -y
+sudo apt-get install kibana -y
+sudo apt-get install logstash -y
 ```
 
 ## Configuring Elasticsearch

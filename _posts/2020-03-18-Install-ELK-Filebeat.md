@@ -311,17 +311,23 @@ log { source(net); destination(remote); };
 
 Save the conf file.
 
-d. Restart syslog-ng using
+d. Restart syslog-ng using and check if our syslog port is up or not.
 
 ```
-sudo systemctl restart syslog-ng
-``
+$ sudo systemctl restart syslog-ng
+$ sudo netstat -antup | grep -i syslog-ng
+udp        0      0 0.0.0.0:514             0.0.0.0:*                           7534/syslog-ng
+```
 
 e. In Cyseca Dashboard. Update the logging configuration like below:-
 
 ![syslog config](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/syslog.PNG)
 
-f. Try to execute some executables that Cyseca blocked and see the log at ``cyseca.log`` using ``sudo cat /var/log/cyseca.log``. 
+f. Try to execute some executables that Cyseca blocked and see the log at ``cyseca.log`` using 
+
+```
+$ sudo cat /var/log/cyseca.log
+``` 
 
 If the file doesnt exist, try to repeat step 4 - 6 again.
 
@@ -340,3 +346,4 @@ Reference:
 4. [https://linuxconfig.org/install-elk-on-ubuntu-18-04-bionic-beaver-linux](https://linuxconfig.org/install-elk-on-ubuntu-18-04-bionic-beaver-linux)
 5. [https://www.lahilabs.com/2020/01/02/how-to-install-elk-siem-for-beginners-complete-guide/](https://www.lahilabs.com/2020/01/02/how-to-install-elk-siem-for-beginners-complete-guide/)
 6. [https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04)
+7. [https://raymii.org/s/tutorials/Syslog_config_for_remote_logservers_for_syslog-ng_and_rsyslog_client_server.html](https://raymii.org/s/tutorials/Syslog_config_for_remote_logservers_for_syslog-ng_and_rsyslog_client_server.html)

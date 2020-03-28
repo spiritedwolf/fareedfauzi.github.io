@@ -311,12 +311,12 @@ log { source(net); destination(remote); };
 
 Save the conf file.
 
-d. Restart syslog-ng using and check if our syslog port is up or not.
+d. Restart syslog-ng and check if our syslog port is up or not.
 
 ```
 $ sudo systemctl restart syslog-ng
 $ sudo netstat -antup | grep -i syslog-ng
-udp        0      0 0.0.0.0:514             0.0.0.0:*                           7534/syslog-ng
+udp        0      0 0.0.0.0:514       0.0.0.0:*        7534/syslog-ng
 ```
 
 e. In Cyseca Dashboard. Update the logging configuration like below:-

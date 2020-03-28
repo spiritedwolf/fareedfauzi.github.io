@@ -218,12 +218,14 @@ sudo service filebeat start #or restart if you have start before
 ```
 Click "Check data" to ensure elastic have fetch our syslog. Now go to dashboard panel. Restart and set Time Range to "Today" 
 
-## This part is for Cyseca logging (for my task note)
+## Optional: This part is for Cyseca logging (for my task note, you can ignore this)
 1. In ELK/SIEM server, install syslog-ng first
 
 ``$ sudo apt install syslog-ng``
 
-2. Copy original configuration to ``.bak``
+2. Copy original configuration to ``.bak`` to backup original conf file (in case we messed up). 
+
+Use this command ``sudo cp /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf.bak``
 
 3. Edit config file of syslog-ng
 
@@ -263,7 +265,11 @@ Scrolling to "destination" part, add this line
 destination remote { file("/var/log/cyseca.log"); };
 ```
 
-And for "Log paths", comment those lines that start with ``log { source(s_src) blablabla `` to avoid error and add ``log { source(net); destination(remote); };`` like example above.
+Scrolling again to the "Log paths". 
+
+Comment those lines that start with ``log { source(s_src) blablabla `` to avoid error 
+
+and add ``log { source(net); destination(remote); };`` like example above.
 
 ```
 log { source(net); destination(remote); };
@@ -275,19 +281,21 @@ log { source(net); destination(remote); };
 #log { source(s_src); filter(f_lpr); destination(d_lpr); };                                                                                                                                                        #log { source(s_src); filter(f_syslog3); destination(d_syslog); };
 #log { source(s_src); filter(f_user); destination(d_user); };
 #log { source(s_src); filter(f_uucp); destination(d_uucp); };
-
-till end.
+.
+.
+.
+# till the last of log { source(s_src) blablabla
 ```
 
 Save the conf file.
 
 4. Restart syslog-ng using ``sudo systemctl restart syslog-ng``
 
-5. In Cyseca Dashboard. Update configuration like below:-
+5. In Cyseca Dashboard. Update the logging configuration like below:-
 
+![syslog config](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/syslog.PNG)
 
-
-6. Try execute executable that Cyseca blocked. And see the log at cyseca.log using ``sudo cat /var/log/cyseca.log``. 
+6. Try to execute some executables that Cyseca blocked and see the log at ``cyseca.log`` using ``sudo cat /var/log/cyseca.log``. 
 
 If the file doesnt exist, try to repeat step 4 - 6 again.
 

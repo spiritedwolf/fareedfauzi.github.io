@@ -218,6 +218,83 @@ sudo service filebeat start #or restart if you have start before
 ```
 Click "Check data" to ensure elastic have fetch our syslog. Now go to dashboard panel. Restart and set Time Range to "Today" 
 
+## This part is for Cyseca logging (for my task note)
+1. In ELK/SIEM server, install syslog-ng first
+
+``$ sudo apt install syslog-ng``
+
+2. Copy original configuration to ``.bak``
+
+3. Edit config file of syslog-ng
+
+``$ sudo nano /etc/syslog-ng/syslog-ng.conf``
+
+Uncomment this line in "Sources" part
+
+```
+########################
+# Sources
+########################
+# This is the default behavior of sysklogd package
+# Logs may come from unix stream, but not from another machine.
+#
+#source s_src {
+#       system();
+#       internal();
+#};
+```
+
+Edit this line to this
+```
+# If you wish to get logs from remote machine you should uncomment
+# this and comment the above source line.
+#
+source net { udp(); };
+#source s_net { tcp(ip(127.0.0.1) port(1000)); };
+```
+
+Scrolling to "destination" part, add this line
+```
+########################
+# Destinations
+########################
+# First some standard logfile
+#
+destination remote { file("/var/log/cyseca.log"); };
+```
+
+And for "Log paths", comment those lines that start with ``log { source(s_src) blablabla `` to avoid error and add ``log { source(net); destination(remote); };`` like example above.
+
+```
+log { source(net); destination(remote); };
+#log { source(tcp_s); destination(cyseca); };
+#log { source(s_src); filter(f_auth); destination(d_auth); };
+#log { source(s_src); filter(f_cron); destination(d_cron); };
+#log { source(s_src); filter(f_daemon); destination(d_daemon); };
+#log { source(s_src); filter(f_kern); destination(d_kern); };
+#log { source(s_src); filter(f_lpr); destination(d_lpr); };                                                                                                                                                        #log { source(s_src); filter(f_syslog3); destination(d_syslog); };
+#log { source(s_src); filter(f_user); destination(d_user); };
+#log { source(s_src); filter(f_uucp); destination(d_uucp); };
+
+till end.
+```
+
+Save the conf file.
+
+4. Restart syslog-ng using ``sudo systemctl restart syslog-ng``
+
+5. In Cyseca Dashboard. Update configuration like below:-
+
+
+
+6. Try execute executable that Cyseca blocked. And see the log at cyseca.log using ``sudo cat /var/log/cyseca.log``. 
+
+If the file doesnt exist, try to repeat step 4 - 6 again.
+
+
+
+
+
 ---
 
 You're good to go now! ❤️

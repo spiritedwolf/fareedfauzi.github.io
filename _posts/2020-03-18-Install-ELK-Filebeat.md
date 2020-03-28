@@ -120,7 +120,7 @@ input {
 Create the configuration file and insert below lines:
 
 ```
-$ sudo nano /etc/logstash/conf.d/30-elasticsearch-output.conf
+$ sudo nano /etc/logstash/conf.d/elasticsearch-output.conf
 ```
 
 ```

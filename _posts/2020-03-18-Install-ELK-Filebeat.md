@@ -207,7 +207,7 @@ enabled: true
 
 Enable and configure the system module
 ```
-$ filebeat modules enable system
+$ sudo filebeat modules enable system
 ```
 Edit ``/etc/filebeat/modules.d/system.yml``
 

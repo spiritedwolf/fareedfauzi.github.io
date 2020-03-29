@@ -41,7 +41,7 @@ sudo apt-get install logstash -y
 Modify *elasticsearch.yml* file:
 
 ```
-$ nano /etc/elasticsearch/elasticsearch.yml
+$ sudo nano /etc/elasticsearch/elasticsearch.yml
 ```
 
 Uncomment *network.host* and *http.port* and do some changes and addition. Following configuration should be added:

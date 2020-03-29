@@ -53,10 +53,15 @@ http.port: 9200
 
 Check java home
 
-``echo $JAVA_HOME``
+```
+$ sudo echo $JAVA_HOME
+```
 
 Edit and uncomment this part in ``/etc/default/elasticsearch`` to
 
+```
+$ sudo nano /etc/default/elasticsearch
+```
 ```
 JAVA_HOME=/usr/lib/jvm/java-14-oracle
 ```
@@ -64,9 +69,7 @@ JAVA_HOME=/usr/lib/jvm/java-14-oracle
 Enable and start elastic search:
 
 ```
-$ sudo systemctl enable elasticsearch.service
-$ sudo systemctl start elasticsearch.service
-$ sudo systemctl status elasticsearch
+$ sudo systemctl enable elasticsearch.service && sudo systemctl start elasticsearch.service && sudo systemctl status elasticsearch
 ```
 
 Check installation
@@ -93,9 +96,7 @@ elasticsearch.url: "http://localhost:9200"
 Enable it on boot and start Kibana service:
 
 ```
-$ sudo systemctl enable kibana.service
-$ sudo systemctl start kibana.service
-$ sudo systemctl status kibana.service
+$ sudo systemctl enable kibana.service && sudo systemctl start kibana.service && sudo systemctl status kibana.service
 ```
 
 Go to this url *localhost:5601* to view Kibana dashboard
@@ -136,16 +137,12 @@ output {
 Let’s enable Logstash on boot and start the service:
 
 ```
-$ sudo systemctl enable logstash.service
-$ sudo systemctl start logstash.service
-$ sudo systemctl status logstash.service
+$ sudo systemctl enable logstash.service && sudo systemctl start logstash.service && sudo systemctl status logstash.service
 ```
 
 ## To start all service (Run this command when you've done config)
 ```
-$ sudo systemctl start elasticsearch.service
-$ sudo systemctl start kibana.service
-$ sudo systemctl start logstash.service
+$ sudo systemctl start elasticsearch.service && sudo systemctl start kibana.service && sudo systemctl start logstash.service
 ```
 
 # Filebeat setup and installation for Client
@@ -154,15 +151,14 @@ $ sudo systemctl start logstash.service
 
 As example we gonna setup syslog logging.
 
-Go to Kibana home > Logging > add log data > system logs. And follow the steps for DEB.
+Go to Kibana _home_ > _Logging_ > _add log data_ > _system logs_. And follow the steps for _DEB_.
 
 ## Install and Configure Filebeat
 
 To install filebeat:
 
 ```
-$ curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.7-amd64.deb
-$ sudo dpkg -i filebeat-6.8.7-amd64.deb
+$ curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.7-amd64.deb && sudo dpkg -i filebeat-6.8.7-amd64.deb
 ```
 
 Now lets make changes in below configuration file

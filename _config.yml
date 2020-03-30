@@ -17,7 +17,7 @@ locale                   : "en-US"
 title                    : "/fareedfauzi"
 title_separator          : "-"
 name                     : "Fareed Fauzi"
-description              : "Interested in RCE and security research"
+description              : "Interested in RCE and security research. Just try again, fail again and fail better :)"
 url                      : fareedfauzi.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

@@ -132,7 +132,7 @@ sudo apt-get install oracle-java14-installer
 
 # ELK Things~
 
-## Install ELK in one bash script\
+## Install ELK in one bash script
 
 We gonna use ELK version 6.x cause I've trouble with version 7.x.
 
@@ -315,6 +315,11 @@ $ sudo systemctl start elasticsearch.service && sudo systemctl start kibana.serv
 ```
 
 ## Display log on Kibana
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/logstash1.PNG)
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/logstash2.PNG)
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/logstash3.PNG)
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/logstash4.PNG)
 
 
 ---

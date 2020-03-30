@@ -227,13 +227,14 @@ input {
 
 filter {
   grok {
-   match => { "%{ts} %{+ts} %{+ts} %{IPV4:IP_AWL} AWLServer\[%{NUMBER:AWL_SERVER}\]: info: \|type:"%{WORD:Type}"\|client=%{NUMBER:CLIENT}\|ip=::ffff:%{IPV4:IP_CLIENT}\|size=%{NUMBER:SIZE}\|sha256=%{WORD:SHA256}\|path="%{WINPATH:PATH}"\|md5=%{WORD:MD5}\|sha1=%{WORD:SHA1}\|msg=\|" }
+   match => { "message" => "%{SYSLOGTIMESTAMP:timestamp} %{IP:IP_AWL} AWLServer\[%{NUMBER:AWL_SERVER}\]: info: \|type:\"%{WORD:Type}\"\|client=%{NUMBER:CLIENT}\|ip=::ffff:%{IPV4:IP_CLIENT}\|size=%{NUMBER:SIZE}\|sha256=%{WORD:SHA256}\|path=\"%{WINPATH:PATH}\"\|md5=%{WORD:MD5}\|sha1=%{WORD:SHA1}\|msg=\|" }
   }
 }
 
 output {
   elasticsearch {
     hosts => ["localhost:9200"]
+    index => "logstash-cyseca-%{+YYYY.MM.dd}"
   }
 }
 ```

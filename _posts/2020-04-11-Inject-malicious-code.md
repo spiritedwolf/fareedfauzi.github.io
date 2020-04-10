@@ -15,7 +15,7 @@ This is for research and education purpose only. If you do something bad, do wit
 Shellter is a dynamic shellcode injection tool, and the first truly dynamic PE infector ever created.
 It can be used in order to inject shellcode into native Windows applications (currently 32-bit applications only).
 
-Website: [https://www.shellterproject.com/](https://www.shellterproject.com/)
+Shellter Website: [https://www.shellterproject.com/](https://www.shellterproject.com/)
 
 We gonna use this tool to inject our meterpreter reverse shell into a clean PE and we will start listening for the shell and execute the malware at the client side.
 
@@ -42,7 +42,7 @@ wget https://www.7-zip.org/a/7z1900.exe
 shellter
 ```
 
-//pic1
+![//pic1](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic1.PNG)
 
 ## Select Mode and PE path
 
@@ -50,18 +50,18 @@ Shellter can run in either Auto or Manual mode. So, in our case here, we gonna r
 
 For PE target, type the path of your PE location and ENTER.
 
-//pic2
+![//pic2](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic2.PNG)
 
 
 ## Enable stealth mode
 
 Let's wait for a second..
 
-//pic3
+![//pic3](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic3.PNG)
 
 Shellter will then ask us if we want Stealth Mode which it will restore the PE execution flow after our payload has been executed. Choose 'Y' for yes. Then ENTER.
 
-//pic4
+![//pic4](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic4.PNG)
 
 ## Choose payload 
 
@@ -69,7 +69,7 @@ It will then ask us to choose between using those displayed payload or our own c
 
 Type 'L' for listed payload and select index '1' for Meterpreter reverse TCP payload.
 
-//pic5
+![//pic5](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic5.PNG)
 
 ## Set your IP and Port for the payload
 
@@ -83,7 +83,8 @@ Shellter then will do his job for us.
 ## PE Injection done
 
 Shellter will tell us that our injection is verified
-//pic6
+
+![//pic6](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic6.PNG)
 
 ## Transfering file
 
@@ -112,24 +113,23 @@ msf5 exploit(multi/handler) > run
 ## Execute and pwned
 
 Soon we download the PE...
- //pic7
+ ![//pic7](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic7.PNG)
  
 Execute the malicious PE and take a look at our multi handler listener at our Kali Machine.
-//pic8
+![//pic8](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic8.PNG)
 
 As you can see above, the binary act normally and our payload is executed. Hooray.
-//pic9
+![//pic9](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic9.PNG)
 
 ## Scan with VirusTotal
 
 Scanning through VirusTotal results us 25/70 detection.
-//pic10
+![//pic10](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic10.PNG)
 
 As you can see, there is a lot of AV that doesnt detect this malware too.
-//pic11
+![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic11.PNG)
 
 So, make sure to gather information about our target client's AV first before attempt to attack.
 
 
-
-
+## Thanks for reading

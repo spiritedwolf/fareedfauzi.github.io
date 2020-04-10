@@ -21,7 +21,7 @@ We gonna use this tool to inject our meterpreter reverse shell into a clean PE a
 
 ## Installation
 
-Since Shellter is designed to be run on Windows operating systems, we will also install wine
+Since Shellter is designed to be run on Windows operating systems, we will install wine
 
 ```
 apt update
@@ -88,12 +88,12 @@ Shellter will tell us that our injection is verified
 
 ## Transfering file
 
-Transfer malicious PE file to our Windows client. For our case, I'm using Python HTTP server.
+Transfer your malicious PE file to our Windows client. In my case, I'm using Python HTTP server.
 ```
 python -m SimpleHTTPServer 8080
 ```
 
-In our Windows client, navigate to our Kali Linux IP with port 8080 in web browser. Then, download the malicious PE file.
+Go to our Windows client, navigate to our Kali Linux IP with port 8080 in web browser. Then, download the malicious PE file.
 
 ## Set up meterpreter listener
 
@@ -113,20 +113,25 @@ msf5 exploit(multi/handler) > run
 ## Execute and pwned
 
 Soon we download the PE...
+
  ![//pic7](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic7.PNG)
  
 Execute the malicious PE and take a look at our multi handler listener at our Kali Machine.
+
 ![//pic8](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic8.PNG)
 
 As you can see above, the binary act normally and our payload is executed. Hooray.
+
 ![//pic9](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic9.PNG)
 
 ## Scan with VirusTotal
 
 Scanning through VirusTotal results us 25/70 detection.
+
 ![//pic10](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic10.PNG)
 
 As you can see, there is a lot of AV that doesnt detect this malware too.
+
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic11.PNG)
 
 So, make sure to gather information about our target client's AV first before attempt to attack.

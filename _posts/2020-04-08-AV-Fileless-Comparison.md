@@ -18,12 +18,12 @@ I've test some fileless command in my lab with AV Protection and here's the resu
 
 | Fileless technique | Bitdefender | Avast | Symantec | Webroot | ESET | Karspersky | Sophos | TrendMicro | WinDef | Malwarebytes |
 | --- | ---| ---| ---| ---| ---| ---| ---| ---| ---| ---|
-| koadic `mshta ` | ✔️| ❌|❌ | ❌| ✔️ |❌ | ❌| ❌| ✔️ |❌ |
-| koadic `regsvr ` | ✔️|❌ |❌ | ❌|✔️ |✔️ |✔️ |✔️ | ✔️| ❌|
-| koadic `rundll32_js ` | ✔️|❌ |✔️ | ❌|✔️ | ✔️|❌ |✔️ | ✔️| ❌|
+| koadic `mshta` | ✔️| ❌|❌ | ❌| ✔️ |❌ | ❌| ❌| ✔️ |❌ |
+| koadic `regsvr` | ✔️|❌ |❌ | ❌|✔️ |✔️ |✔️ |✔️ | ✔️| ❌|
+| koadic `rundll32_js` | ✔️|❌ |✔️ | ❌|✔️ | ✔️|❌ |✔️ | ✔️| ❌|
 | koadic `bitsadmin ` | ❌|✔️ |❌ |❌ |✔️ |❌ |✔️ |✔️ |✔️ |❌ |
-|koadic `disk  `|✔️ | ❌| ❌|❌ |✔️ |❌ |✔️ |✔️ |✔️ |❌ |
-| koadic `wmic ` | ✔️|❌ |✔️ |❌ |❌ |✔️ |✔️ | ✔️| ✔️|❌ |
+|koadic `disk`|✔️ | ❌| ❌|❌ |✔️ |❌ |✔️ |✔️ |✔️ |❌ |
+| koadic `wmic` | ✔️|❌ |✔️ |❌ |❌ |✔️ |✔️ | ✔️| ✔️|❌ |
 | Malicious Powershell line  |✔️ |✔️ |✔️ |❌ | ❌| ✔️|❌ |✔️ | ❌| ❌|
 | msvenom `msiexec ` |✔️ |✔️ | ✔️|✔️ |✔️ |✔️ | ✔️| ✔️|✔️ |✔️ |
 | msvenom `certutil `| ✔️| ✔️| ✔️|❌ | ✔️| ✔️|✔️ |✔️ |✔️ |✔️ |

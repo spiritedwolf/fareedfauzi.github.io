@@ -14,6 +14,7 @@ I've test some fileless command in my lab with AV Protection and here's the resu
 |---|---|
 | ✔️ | Blocked |
 | ❌ | Bypassed |
+
 ---
 
 | Fileless technique | Bitdefender | Avast | Symantec | Webroot | ESET | Karspersky | Sophos | TrendMicro | WinDef | Malwarebytes |

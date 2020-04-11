@@ -10,6 +10,12 @@ categories:
 
 I've test some fileless command in my lab with AV Protection and here's the result.
 
+| Symbol | Description |
+|---|---|
+| ✔️ | Blocked |
+| ❌ | Bypassed |
+---
+
 | Fileless technique | Bitdefender | Avast | Symantec | Webroot | ESET | Karspersky | Sophos | TrendMicro | WinDef | Malwarebytes |
 | --- | ---| ---| ---| ---| ---| ---| ---| ---| ---| ---|
 | koadic `mshta ` | ✔️| ❌|❌ | ❌| ✔️ |❌ | ❌| ❌| ✔️ |❌ |

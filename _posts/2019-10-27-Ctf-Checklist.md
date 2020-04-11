@@ -223,6 +223,11 @@ Whatever happen, google is your friend. There are a lot cryptography tools onlin
 
 4.  Some [tips](https://github.com/zjgcjy/CTF-pwn-tips) from expert.
 5.  Function that can lead to bof
+  - scanf
+  - read
+  - strcat
+  - fread
+  - fgets
   - sprintf
   - strcpy
   - gets

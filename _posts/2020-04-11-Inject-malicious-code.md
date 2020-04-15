@@ -142,20 +142,25 @@ We can also inject fileless attack command line using WinExec payload.
 But during the prompt of Payloads, we must choose (type) number '7' for WinExec stager.
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic12.PNG)
+
 While in your Kali machine, open koadic and run mshta payload. 
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic13.PNG)
+
 Copy the fileless attack command and paste into Shellter with ``cmd /c`` infront of the command to tell windows start cmd with the command we specifed. In our case, we want to run mshta payload. 
 
 If you guys want to execute calculator app. You may want to use ``cmd /c calc.exe`` to execute calc.exe.
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic14.PNG)
+
 After press 'enter', our payload now should be verified. Now, deliver the malicious app into victim machine.
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic15.PNG)
+
 Once user execute our malicious putty.exe, their machine will get compromise.
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic16.gif)
+
 We're in their machine now. Let's run some cmd command using `exec_cmd` module in koadic.
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic17.PNG)

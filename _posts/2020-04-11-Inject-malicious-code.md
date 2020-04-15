@@ -153,7 +153,7 @@ If you guys want to execute calculator app. You may want to use ``cmd /c calc.ex
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic14.PNG)
 
-After press 'enter', our payload now should be verified. Now, deliver the malicious app into victim machine.
+After pressing 'enter' and wait about a few seconds, our payload now should be verified. We then can deliver the malicious app into victim's machine.
 
 ![//pic11](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/shellter/pic15.PNG)
 

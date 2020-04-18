@@ -111,6 +111,13 @@ To find out more about a certain wargame, just visit its page linked from the me
 
 1.  [https://forensicscontest.com/](https://forensicscontest.com/) - PCAP forensics
 
+# Forensics Challenge
+
+This mindmap from Amanhardikar. Refer his website for more detail. All credit to him for this pic.  [https://www.amanhardikar.com/mindmaps/Practice.html](https://www.amanhardikar.com/mindmaps/ForensicChallenges.html)
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/Practice1.png)
+
+
 # Penetration testing practice lab - Vulnerable Apps / Systems
 
 This mindmap from Amanhardikar. Refer his website for more detail. All credit to him for this pic.  [https://www.amanhardikar.com/mindmaps/Practice.html](https://www.amanhardikar.com/mindmaps/Practice.html)

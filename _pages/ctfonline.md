@@ -17,6 +17,8 @@ Here some of them that I got by some google-fu and also from variety of other so
  5. [Pwn](#pwn)
  6. [Cryptography](#cryptography)
  8. [Network_Forensics](#network_forensics)
+ 9. [Forensics Challenge](#forensics-challenge)
+ 10. [Others Penetration testing lab](#penetration-testing-practice-lab---vulnerable-apps--systems)
 
 # **General_CTF**
 

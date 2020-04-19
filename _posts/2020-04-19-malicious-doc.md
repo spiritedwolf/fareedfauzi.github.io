@@ -64,7 +64,10 @@ Now, we can deliver this malicious document to target user.
 # User execute and enable content
 Once user open the document and enable content of our malicious document, the user will be compromised.
 
+Take a look at below gif on how it works.
+
 ![//pic8.gif](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic8.gif)
+
 Koadic now has take control our target user.
 
 # User (victim) precaution

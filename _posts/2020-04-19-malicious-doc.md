@@ -50,15 +50,15 @@ End Sub
 
 You can also use other payload command line like powershell etc. The mshta attack is just an example.
 
-This macro will execute powershell to download the powercat script and open reverse shell for us.
+In my case here, this macro will execute mshta fileless payload.
 
 ## Save as .doc
 
-We gonna choose `.doc` or `.docm` file because this type of document support to execute macro attack.
+We gonna choose `.doc` or `.docm` file format to save this document because this type of document support to execute macro attack.
 
 ![//pic7](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic7.PNG)
 
-Deliver this malicious document to target user
+Now, we can deliver this malicious document to target user.
 
 
 # User execute and enable content

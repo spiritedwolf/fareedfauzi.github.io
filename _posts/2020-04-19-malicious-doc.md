@@ -9,13 +9,13 @@ categories:
 ---
 
 Hello world.
-This blog post is tend to show how macro attack works. We gonna create a malicious document that will be execute our mshta payload.
+This blog post is tend to show how macro attack works. We gonna create a malicious document that will execute our mshta payload.
 
 This blog post is for education and research purpose only. If you do something bad, do with your own risk.
 
 ## Create document file in Microsoft Word
 
-We will create a word file and save it as `.doc`. 
+We will create a word file first and at the end of this tutorial save it as `.doc`. 
 
 Maybe as an attacker, they will display a message to phishing user to click `enable editing` and `enable content` of the document like below picture.
 
@@ -31,7 +31,7 @@ Click Macros
 
 ![//pic3](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic3.PNG)
 
-Type any name you want for Macro and click "create" to create the macro
+Type any name you want for Macro name and click "create" to create the macro
 
 ![//pic4](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic4.PNG)
 
@@ -39,7 +39,7 @@ On "Project" path, click ThisDocument
 
 ![//pic5](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic5.PNG)
 
-Write our malicious macro like below
+Write our malicious macro code like below
 
 ```
 Sub document_open()
@@ -67,7 +67,7 @@ Once user open the document and enable content of our malicious document, the us
 ![//pic8.gif](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic8.gif)
 Koadic now has take control our target user.
 
-# User precaution
+# User (victim) precaution
 - Please make sure the document we've downloaded from internet/mail is clean
 - Take a look who is the sender in your mail box
 - Take a precautionary measures before open `.doc` or `.docm` document format.

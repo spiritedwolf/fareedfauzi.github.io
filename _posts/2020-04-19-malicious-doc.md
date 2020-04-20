@@ -9,7 +9,10 @@ categories:
 ---
 
 Hello world.
-This blog post is tend to show how macro attack works. In real scenario, attacker may phishing user by email user with some sort of business or organization matter etc., if user download and execute those malicious file, their machine then will be compromised.
+
+This blog post is tend to show how macro attack works. 
+
+In real scenario, attacker may phishing user by email user with some sort of business or organization matter etc., if user download and execute those malicious file, their machine then will be compromised.
 
 Successful rate for this macro attack being detected by AntiVirus is depend on how the obfuscation of the macro and the Antivirus(AV) signature itself. It's look like the more obfuscation made by attacker, the lower the chance of their malware being detected by AV. One of the popular malware using this type of attack is Emotet malware. They use macro attack to drop their payload, and then execute the executable at the end of the process.
 
@@ -17,7 +20,7 @@ Picture below from CyberReason show how of Emotet malware works.
 
 ![enter image description here](https://lh6.googleusercontent.com/2NuozHdR7FXjw0eHCtSOa0kJyTgTGbC1Q64bhXNi1gOCRW7lHJfrb8SnAXaN6wjY9BKmsd0RwekmY1y-fCk21CVv2CBmMPBMQb9iGDghRfLCZ8GfrN0DSRm6GH0D8Fc7HH2-iKpH)
 
-We gonna create a basic malicious document attack that will execute mshta payload without any obfuscation made whenever user open our malicious document.
+We gonna create a basic malicious document attack that will execute mshta payload (without any obfuscation made) whenever user open our malicious document.
 
 This blog post is for education and research purpose only. If you do something bad, do with your own risk.
 

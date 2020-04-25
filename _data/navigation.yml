@@ -8,6 +8,8 @@ main:
     url: /ctfonline/
   #- title: "/archives"
   #  url: /archives/
+  - title: "/vulnhub-writeups"
+    url: /vulnhub-writeups/
   - title: "/categories"
     url: /categories/
   - title: "/tags"

@@ -9,7 +9,7 @@ VulnHub
 
 | Machine name | Markdown link |
 | --- | --- |
-| Bob: 1.0.1 | [https://github.com/fareedfauzi/VulnHub-Writeups/blob/master/Bob1.0.1/Bob%201.0.1.md](https://github.com/fareedfauzi/VulnHub-Writeups/blob/master/Bob1.0.1/Bob%201.0.1.md) |
+| Bob: 1.0.1 | [Bob: 1.0.1](https://github.com/fareedfauzi/VulnHub-Writeups/blob/master/Bob1.0.1/Bob%201.0.1.md) |
 
 ---
 

@@ -5,16 +5,17 @@ author_profile: true
 
 ---
 
-VulnHub
+## VulnHub
 
-| Machine name | Markdown link |
-| --- | --- |
-| Bob: 1.0.1 | [Bob: 1.0.1](https://github.com/fareedfauzi/VulnHub-Writeups/blob/master/Bob1.0.1/Bob%201.0.1.md) |
+| Machine name | OS | Difficulty | Markdown link |
+| --- | --- | --- | --- |
+| Bob: 1.0.1 | Linux | Beginner/Intermediate | [Writeup](https://github.com/fareedfauzi/VulnHub-Writeups/blob/master/Bob1.0.1/Bob%201.0.1.md) |
 
 ---
 
-HackTheBox
+## HackTheBox
 
-| Machine name | Markdown link |
-| --- | --- |
-| Not available yet | Not available yet |
+| Machine name | OS | Difficulty | Markdown link |
+| --- | --- | --- | --- |
+| Not available yet | Not available yet | Not available yet | Not available yet |
+

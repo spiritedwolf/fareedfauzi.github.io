@@ -3,7 +3,7 @@ main:
   - title: "/home"
     url: https://fareedfauzi.github.io/
   - title: "/ctf_checklist"
-    url: https://fareedfauzi.gitbook.io/ctf-hecklist-for-beginner/
+    url: https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/
   - title: "/online_ctf_list"
     url: https://fareedfauzi.gitbook.io/practice-ctf-list/
 # - title: "/archives"

@@ -8,10 +8,10 @@ main:
     url: /ctfonline/
 # - title: "/archives"
 #   url: /archives/
-  - title: "/htb_oscp"
-    url: https://fareedfauzi.gitbook.io/htb-oscp-like-box-writeups/
-  - title: "/vulnhub_oscp"
-    url: https://fareedfauzi.gitbook.io/vulnhub-oscp-like-write-ups/
+#  - title: "/htb_oscp"
+#    url: https://fareedfauzi.gitbook.io/htb-oscp-like-box-writeups/
+#  - title: "/vulnhub_oscp"
+#    url: https://fareedfauzi.gitbook.io/vulnhub-oscp-like-write-ups/
   - title: "/categories"
     url: /categories/
   - title: "/tags"

@@ -5,7 +5,7 @@ main:
   - title: "/ctf_checklist"
     url: https://fareedfauzi.gitbook.io/ctf-hecklist-for-beginner/
   - title: "/online_ctf_list"
-    url: /ctfonline/
+    url: https://fareedfauzi.gitbook.io/practice-ctf-list/
 # - title: "/archives"
 #   url: /archives/
 #  - title: "/htb_oscp"

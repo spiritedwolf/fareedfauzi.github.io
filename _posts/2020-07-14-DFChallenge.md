@@ -309,7 +309,9 @@ By analyze and look up in `Microsoft-Windows-Partition%4Diagnostic`, we can find
 | Tammuz S | SD 1TB R062 | DD564198838D7 |
 | JetFlash | Transcend 16GB | AA00000000000489 |
 | NULL | SAMSUNG MZVLW1T0HMLH-000H1 | 0025_38BC_61B2_F28C |
- 
+
+
+
 **Write the list of ZIP files detected by AV on the user’s PC. (20 points)**
 
 AV logs can be found in `Microsoft-Windows-Windows Defender%4Operational` where we first parse it is using Eric Zimmerman tool called “EvtxECmd”.

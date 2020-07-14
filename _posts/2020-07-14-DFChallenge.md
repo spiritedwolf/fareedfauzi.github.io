@@ -301,7 +301,7 @@ By analyze and look up in `Microsoft-Windows-Partition%4Diagnostic`, we can find
 ![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-39-02.png)
 
 Manufacturer |	Model |	Serial Number |
-| -- | --- | --- |
+| --- | --- | --- |
 Generic	| STORAGE DEVICE| 	NULL| 
 SanDisk	Cruzer|  Glide| 	4C530103461121103482| 
 Seagate	Backup+|  BK| 	NA5BF9H5| 
@@ -331,3 +331,21 @@ We then open the csv file using excel and start search for “.zip”	 keyword.
 User did the VPN Connection on `2020-04-25 15:50:24.686`
 
 ![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-47-20.png)
+
+
+# Todo
+
+1. 103
+2. 201
+3. 202
+4. 203
+5. 204
+6. 301
+7. 302
+8. 303
+9. 304
+10. 401
+11. 402
+12. 403
+13. 404
+14. 501

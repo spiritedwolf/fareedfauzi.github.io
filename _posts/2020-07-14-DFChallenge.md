@@ -45,7 +45,7 @@ Teams must:
 - Describe step-by-step processes for generating your solution.
 - Specify any tools used for this problem.
 
-**Answer:**
+## Answer
 
 ### Tool used:
 1. Uncompyle6
@@ -66,8 +66,9 @@ This is common technique use by attacker to avoid hash check mostly from anti-vi
 
 ### Research on Google about Hash Collison
 I then go to Google to research about this hash collision technique and found a GitHub repository that explain and make a proof of concept on how this hash collision works.
+
 Source: https://github.com/cr-marcstevens/sha1collisiondetection
- 
+
 By using the files (pdf file) provided by the author of the project, I managed to get “Great! I hope this problem will increase awareness and convince the industry to quickly move to safer algorithm” message on my screen.
 
 ![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-09-09.png)
@@ -92,7 +93,7 @@ Answer the question by analyzing given prefetch files.
 - File Size
 - Run count and run times
 
-**Answer:**
+## Answer
 
 ### Tool used:
 
@@ -121,7 +122,6 @@ Cmd> PECmd.exe -d C:\Work\dfchall-korea\102\Prefetch --csv "C:\Work\dfchall-kore
  
 Now we have output of PECmd result in txt file and parsed data of prefetches in CSV format.
 
-### Question and Answer
 
 **What is the name of the most executed program and how many times it was run? (10 points)**
 
@@ -235,10 +235,99 @@ Last program executed:
 
 ![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-28-27.png)
 
+# 104 – Event Log analysis
+
+**Description:** Analyze the given Event Logs and answer the question.
+
+**Questions:**
+1.	Why did the user fail to Windows backup? (15 points)
+2.	Find all connected wireless AP SSIDs. (15 points)
+3.	Find the manufacturer, model and serial number of the external storage device(s) that the user connected. (20 points)
+4.	Write the list of ZIP files detected by AV on the user’s PC. (20 points)
+5.	When did the user perform the VPN connection and disconnection? (yyyy-mm-dd hh:mm UTC + 0) (30 points)
+
+## Answer
+
+### Tool used:
+1. Windows event viewer
+2. ExtxCmd
+
+We first parse out all the event log with ExtxCmd using a bash script
+
+```
+#!/bin/bash
+
+for f in Logs/*.evtx
+do
+	./EvtxECmd.exe -f $f --csv out/
+done
+```
+
+During parsing the events, EvtxCmd output on the terminal were quiet useful and readable than it's csv output. So, I redirect every output of the screen to a text file so that I can review the output efficiently without scrolling up and down in my terminal
+
+```
+script.sh > evtxecmd-output.txt
+```
+
+**Why did the user fail to Windows backup? (15 points)**
+
+Open Application event log, we will see error indicating of Windows backup.
+
+Dive in into that specific event present us with a Korean text with its Windows error code. By using Google, we search about the error code “0x800700E1” and translate the Korean text to English.
+
+We can know that the Windows fail to backup due to the machine contains virus or other unwanted software
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-37-30.png)
+
+**Find all connected wireless AP SSIDs. (15 points)**
+
+Connected wireless AP SSIDs can be found in `Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx`.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-38-19.png)
+
+SSID:
+```
+1.	BBBB4444
+2.	Alpinelab 
+3.	DIRECT-w3D9-HPuIYI
+4.	KT_GiGA_2G_Wave2_1A36
+```
 
 
+**Find the manufacturer, model and serial number of the external storage device(s) that the user connected. (20 points)**
 
+By analyze and look up in `Microsoft-Windows-Partition%4Diagnostic`, we can find a few external storages that has been connected to the user.
 
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-39-02.png)
 
+Manufacturer |	Model |	Serial Number |
+| -- | --- | --- |
+Generic	| STORAGE DEVICE| 	NULL| 
+SanDisk	Cruzer|  Glide| 	4C530103461121103482| 
+Seagate	Backup+|  BK| 	NA5BF9H5| 
+JMICRON	| JMS583| 	DD564198838D7| 
+Tammuz S | 	SD 1TB R062| 	DD564198838D7| 
+JetFlash| 	Transcend 16GB| 	AA00000000000489| 
+NULL| 	SAMSUNG MZVLW1T0HMLH-000H1| 	0025_38BC_61B2_F28C| 
+ 
+**Write the list of ZIP files detected by AV on the user’s PC. (20 points)**
 
+AV logs can be found in `Microsoft-Windows-Windows Defender%4Operational` where we first parse it is using Eric Zimmerman tool called “EvtxECmd”.
 
+`EvtxECmd.exe -f "C:\Work\dfchall-korea\104\Logs\Microsoft-Windows-Windows Defender%4Operational.evtx" --csv windefenderoutput`
+
+We then open the csv file using excel and start search for “.zip”	 keyword.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-46-30.png)
+
+```
+1.	Brutus.zip
+2.	Havij 1.17 Pro + Crack.zip
+3.	php-webshells-master.zip
+```
+
+**When did the user perform the VPN connection and disconnection? (yyyy-mm-dd hh:mm UTC + 0) (30 points)**
+
+User did the VPN Connection on `2020-04-25 15:50:24.686`
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfchallenge-korea/2020-07-14-10-47-20.png)

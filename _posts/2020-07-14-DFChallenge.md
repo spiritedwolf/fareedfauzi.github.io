@@ -302,13 +302,13 @@ By analyze and look up in `Microsoft-Windows-Partition%4Diagnostic`, we can find
 
 | Manufacturer | Model | Serial Number |
 | --- | --- | --- |
-| Generic | STORAGE DEVICE | NULL | 
-| SanDisk Cruzer|  Glide | 4C530103461121103482 | 
-| Seagate Backup+ |  BK | NA5BF9H5 | 
-| JMICRON | JMS583 | 	DD564198838D7 | 
-| Tammuz S | SD 1TB R062 | DD564198838D7 | 
-| JetFlash | Transcend 16GB | AA00000000000489 | 
-| NULL | SAMSUNG MZVLW1T0HMLH-000H1 | 0025_38BC_61B2_F28C | 
+| Generic | STORAGE DEVICE | NULL |
+| SanDisk Cruzer| Glide | 4C530103461121103482 |
+| Seagate Backup+ | BK | NA5BF9H5 |
+| JMICRON | JMS583 | DD564198838D7 |
+| Tammuz S | SD 1TB R062 | DD564198838D7 |
+| JetFlash | Transcend 16GB | AA00000000000489 |
+| NULL | SAMSUNG MZVLW1T0HMLH-000H1 | 0025_38BC_61B2_F28C |
  
 **Write the list of ZIP files detected by AV on the user’s PC. (20 points)**
 

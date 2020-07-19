@@ -36,6 +36,7 @@ You are reverse engineering analyst. You need installation of specific version o
 | Filename: | checker.pyc |
 | SHA256:| a0a1ecc08bb6470f4253286e50a4a40f1335916f3b1fd1aff14971a21ffc8be1 |
 | Usage: | `python3 checker.pyc [file1] [file2]` |
+
 Tip: If the following error appears, find appropriate version of python; “RuntimeError: Bad magic number”
 
 **Questions:**

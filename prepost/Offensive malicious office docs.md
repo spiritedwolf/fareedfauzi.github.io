@@ -7,6 +7,10 @@ and many more...
 
 In this post, we will learn various of techniques how to make a maldocs that can execute code (in our case, we will just run the calc.exe).
 
+But first, let we talk about office file format.
+
+
+
 # DDE attack
 
 # Word Macro

@@ -15,6 +15,8 @@ But first, let we talk about office file format.
 
 # Word Macro
 
+# VBA Stomping
+
 # Excel4Macro
 
 # Template injection
@@ -38,3 +40,5 @@ But first, let we talk about office file format.
 # CVE-2017-11826
 
 # CVE 2017-11882
+
+# Other abusing tehcniques

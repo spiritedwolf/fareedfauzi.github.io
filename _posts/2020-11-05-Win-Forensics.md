@@ -58,7 +58,7 @@ One of the powerful capabilities of IRTriage is collecting information from "Vol
 
 The IRTriage is itself just an autoit script that depend on other tools such as:
 
-- Win32 | 64dd
+- Win32 and 64dd
 - Sysinternals Suite
 - The Sleuth Kit
 - Regripper

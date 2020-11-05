@@ -183,4 +183,9 @@ Anything that allows a string as an argument can be obfuscated using string obfu
 - Through the `–replace` operator or the `String.Replace()` method, strings can be replaced either to remove delimiters, or change the meaning of a string: `"System.SafeClass" -replace "Safe","Unsafe"`
 
 
-ref: https://www.blackhat.com/docs/us-17/thursday/us-17-Bohannon-Revoke-Obfuscation-PowerShell-Obfuscation-Detection-And%20Evasion-Using-Science-wp.pdf
+ref: 
+1. https://www.blackhat.com/docs/us-17/thursday/us-17-Bohannon-Revoke-Obfuscation-PowerShell-Obfuscation-Detection-And%20Evasion-Using-Science-wp.pdf
+2. Research Paper "Detecting Malicious PowerShell Commands
+using Deep Neural Networks" by Danny Hendler, Shay Kels and Amir Rubin.
+3. https://www.trendmicro.com/vinfo/pl/security/news/security-technology/security-101-the-rise-of-fileless-threats-that-abuse-powershell
+4. https://www.fireeye.com/content/dam/fireeye-www/blog/pdfs/revoke-obfuscation-report.pdf

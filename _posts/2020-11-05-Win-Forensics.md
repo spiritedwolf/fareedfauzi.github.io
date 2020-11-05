@@ -212,7 +212,7 @@ Also, below I attached the common artifacts' locations:
  1. Memory dump
  2. MFT
 
- # Live Analysis
+# Live Analysis
 
  During live analysis (weather perform the investigation on the physical machine, or you pull out vm image), we can consider these tools to perform the investigation. 
 

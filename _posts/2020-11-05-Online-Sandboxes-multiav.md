@@ -9,8 +9,6 @@ categories:
 - Blog-post
 ---
 
-# List of of sandboxes / Malware Analysis platforms
-
 ## MultiAV
 - [VirusTotal](https://www.virustotal.com/gui/home)
 - [VirScan](https://www.virscan.org/)

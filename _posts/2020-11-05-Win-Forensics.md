@@ -91,6 +91,7 @@ You guys can refer this wonderful and completed cheatsheet by Jai Minton, https:
 Also, below I attached the common artifacts' locations:
 
 ### Windows Event logs
+
 | Artifact name/path | Description |
 | --- | --- |
 | `%system root%\System32\winevt\logs\ *`| Windows logs |
@@ -128,6 +129,7 @@ Also, below I attached the common artifacts' locations:
 
 
 ### File/Folder Opening
+
 | Artifact name/path | Description |
 | --- | --- |
 | `NTUSER.DAT`  | Open/Save MRU, Last-Visited MRU , Recent Files, Office Recent Files |
@@ -147,6 +149,7 @@ Also, below I attached the common artifacts' locations:
 
 
 ### Other browser artifacts
+
 | Artifact name/path | Description |
 | --- | --- |
 | Registry files | Timezone, Network History, |
@@ -158,6 +161,7 @@ Also, below I attached the common artifacts' locations:
 
 
 ### External device / USB device
+
 | Artifact name/path | Description |
 | --- | --- |
 | `C:\Windows\inf\setupapi.dev.log` and `C:\Windows\setupapi.log` | First/Last Times of devices connected |
@@ -166,6 +170,7 @@ Also, below I attached the common artifacts' locations:
 | `System.evtx` | PnP Events | 
 
 ### Account usage
+
 | Artifact name/path | Description |
 | --- | --- |
 | SAM in Registry files | Last login |

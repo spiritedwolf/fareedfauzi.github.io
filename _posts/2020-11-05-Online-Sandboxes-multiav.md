@@ -50,7 +50,7 @@ categories:
 
 
 ## URL Investigation
-- [URLhaus | Browse](https://urlhaus.abuse.ch/browse/)
+-   [URLhaus](https://urlhaus.abuse.ch/browse/)
 -   [AbuseIPDB](https://www.abuseipdb.com/): Provides reputation data about the IP address or hostname
 -   [Auth0 Signals](https://auth0.com/signals/ip): Checks IP address reputation; supports API
 -   [BrightCloud URL/IP Lookup](http://www.brightcloud.com/support/lookup.php): Presents historical reputation data about the website

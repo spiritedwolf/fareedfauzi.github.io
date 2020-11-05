@@ -127,7 +127,7 @@ Also, below I attached the common artifacts' locations:
 |  `C:\Windows\AppCompat\Programs\Amcache.hve` and `C:\Windows\AppCompat\Programs\RecentFilecache.bcf` |  Amacache.hve or RecentFileCache.bcf |
 
 
-#### File Download activities
+### File Download activities
 
 | Artifact name/path | Description |
 | --- | --- |

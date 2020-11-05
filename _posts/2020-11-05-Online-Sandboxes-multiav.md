@@ -88,3 +88,7 @@ categories:
 -   [WebPulse Site Review](https://sitereview.bluecoat.com/): Looks up the website in BlueCoat’s database
 -   [Zscaler Zulu URL Risk Analyzer](http://zulu.zscaler.com/): Examines the URL using real-time and historical techniques
 -   [zveloLive](https://tools.zvelo.com/): Looks up the website in its database of categories
+
+
+Credit:
+- Some of the link, I refer to https://zeltser.com/

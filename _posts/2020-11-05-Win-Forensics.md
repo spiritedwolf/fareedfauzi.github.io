@@ -12,6 +12,20 @@ Hi, good to see you again.
 
 Let's jump to DFIR thingy where this note may help us in approaching suspected/infected Windows machine in DFIR manner. Here we go.
 
+# Common things to check
+
+ 1. Search for Known Malware
+ 2. Review Installed Programs
+ 3. Examine Prefetch
+ 4. Inspect Executables
+ 5. Review Auto-start
+ 6. Review Scheduled Jobs
+ 7. Review User Accounts
+ 8. Examine File System
+ 9. Examine Registry
+ 10. Restore Points
+ 11. Keyword Searching
+
 # Grabbing artifacts
 
 Grabbing artifacts is the first and important stage when it come to digital forensic. I usually will use this three tools.
@@ -197,3 +211,170 @@ Also, below I attached the common artifacts' locations:
 
  1. Memory dump
  2. MFT
+
+ # Live Analysis
+
+ During live analysis (weather perform the investigation on the physical machine, or you pull out vm image), we can consider these tools to perform the investigation. 
+
+### Identify Users Logged into
+
+- `Psloggedon` command
+- `quser` command
+- `netusers` command
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfirnote/2020-11-05-15-29-41.png)
+
+### Look for suspicious process
+
+- Processhacker software
+- Process Explorer Software
+- `tasklist -V` command
+- `pslist` from SysInternal
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfirnote/2020-11-05-15-34-53.png)
+
+### Check for suspicious network connection
+
+- TCPview from SysInternal
+- `netstat -bano` command
+- `ipconfig /displaydns` command
+- `arp -a` command
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfirnote/2020-11-05-15-32-29.png)
+
+### Persistence mechanism check
+
+- Autorun by SysInternal
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfirnote/2020-11-05-15-37-06.png)
+
+### Play around with Nirsoft subtools
+
+- Browsing history
+- AlternateStreamView
+- USBDeview
+- FullEventLogView
+- ShellBagsView
+- WinPreftechView
+- WinLogOnView
+- LastActivityView
+- OpenedFilesView
+- JumpListsView
+- RecentFles View
+- ExecuteProgramsList
+- UserProfilesView
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/dfirnote/2020-11-05-15-40-22.png)
+
+### Others
+
+- Use VoidTools Everything search (to search something)
+- Use FTKImager
+- If find deleted file, try to recover using:
+    - FTK
+    - Photorec
+- Registry analysis
+    - Regripper
+    - Grab `\%systemroot%\system32\config\*` files
+
+# Examine Artifacts
+
+After grabbing all the artifacts, let's examine the evidence thoroughly.
+
+1. Memory artifact
+    - Redline
+    - Volatility
+
+2. Check event logs
+    - Logon Tracer for Security.evtx
+    - Powershell
+    - RDP
+    - Use Redline
+
+3. Timeline
+    - Use Redline Comprehensive
+    - or Use TimeSketch
+    - or Use Plaso
+
+4. File Download
+    - Open/Sae MRU
+    - Email Attachments
+    - Browser Artifacts
+    - Downloads
+
+5. Program Execution
+    - Jumplists (recent execute)
+        - Use Jumlist Explorer
+    -  Check Prefetch ( Applications that have been run on a system )
+    -   Amacache.hve
+
+6. Folder or File opening
+    - Open/Save MRU
+    - Last-Visited MRU
+    - Recent Files `Users\username\AppData\Roaming\Microsoft\Windows\Recent`
+    - Shell Bags
+        - `NTUSER.dat` - ShellBag information for the Desktop,/Windows network folders, remote machines and remote folders
+        - `UsrClass.dat` - ShellBag information for the Desktop, ZIP files, remote folders, local folders, Windows special folders and virtual folders.
+        - Shellbag explorer
+    - Recent LNKs
+    - Jump Lists
+    - Prefetch
+
+7. Deleted file
+    - Check Recycle Bin of every user ( `C:\$Recycle.Bin` or `C:\Recycler` )
+
+8. Check `netstat` result
+
+9. Check Web Browsing History
+    -  Redline Comprehensive result
+    -  Autopsy
+
+10. Enumerate `Users/<name>/*` files like Desktop, Downloads etc.
+
+11. MFT analysis
+    -   [analyzeMFT.py](http://analyzeMFT.py)
+
+12. Registry analysis
+    - `NTUSER.dat`
+    - Amcache
+    - SYSTEM, USERS. SOFTWARE etc in `\%systemroot%\system32\config`
+    - AccessData Registry Viewer tool
+    - RegRipper
+
+13. Persistence mechanism check
+    - Registry
+    - WMI
+    - Startup folder
+    - Schedule task `schtasks /Query`
+
+# Did not found any executable malware?
+
+1.  Malware can be hide using Alternate Data Streams technique.
+2.  Set as hidden
+3.  Check prefetch, jumplists, recent lnk, recent files
+4.  If deleted, recover it if you have the VM image
+5.  Maybe it's a fileless malware. Check powershell log if the attacker using fileless powershell.
+6.  If you did not find any executable, maybe the attacker using other file format as their delivery method. Consider below files:
+    -   Microsoft office files
+    -   LNK shortcut
+    -   .vbs or .vbe or vb
+    -   .scr
+    -   .PS1 .PS1XML, .PS2, .PS2XML, .PSC1, .PSC2
+    -   .bat
+    -   .sct
+    -   .hta .html .htm
+    -   js or jse and .jar
+    -   pdf
+    -   sfx
+    -   dll
+    -   tmp
+    -   py
+    -   inf
+    -   scf
+    -   .CMD
+
+# Found malware?
+
+- Check the owner and permission of the file
+- When it last execute
+- Provide a malware analysis on the malware

@@ -7,7 +7,9 @@ and many more...
 
 In this post, we will learn various of techniques how to make a maldocs that can execute code (in our case, we will just run the `calc.exe`). 
 
-Why security researcher always pop-up a `calc.exe` when doing a Proof-of-Concept? Because it is simple an easy. You can always replace the `calc.exe` execution with any payload you want like *Powershell reverse shell* or *mshta fileless* or anything else that suitable your appetite but popping up a `calc.exe` indicated that this things that we play around right now, can also execute anything like download and execute malware. Not just a `calc.exe` execution.
+Why security researcher always pop-up a `calc.exe` when doing a Proof-of-Concept? Because it is simple and easy to pop up a calculator hahaha. 
+
+You can always replace the `calc.exe` execution with any payload you want like *Powershell reverse shell* or *mshta fileless* or anything else that suitable your appetite but popping up a `calc.exe` indicated that this things that we play around right now, can also execute anything like download and execute malware. Not just a `calc.exe` execution.
 
 Claim: This is for education only as to understand how maldocs were created by the attacker out there. Do with your own risk.
 
@@ -91,7 +93,7 @@ Click `yes`, and calc.exe will be pop-up!
 ![](2020-11-02-22-11-40.png)
 
 
-# Microsoft Word Macro
+# VBA Macro
 
 In malware wild, macro malware is typically transmitted through phishing emails that contain malicious attachments. When the macros run, malware coded into the VBA will begin to infect all files that are opened using Microsoft Office. In our case, we will only execute a `calc.exe` app.
 
@@ -111,7 +113,6 @@ On "Project" path, click ThisDocument
 
 ![//pic5](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maliciousdoc/pic5.PNG)
 
-### Execute command
 
 Write our malicious macro code like below
 
@@ -151,10 +152,122 @@ Save the document as `.doc` or `.docm` and run it!
 
 You can also use other payload command line like powershell etc.
 
+# Template injection
+
+This part will shows us how to create a non-macro document that uses a template that contains vba macros, which is loaded from a remote server when the document is executed.
+
+When the maldoc is opened, it will attempt to retrieve and execute template document define at `word/_rels/settings.xml.rels`.
+
+Let's first create a malicious template document. Then, we will create the second document which we will modify the `word/_rels/settings.xml` of the document which will be lead the document to retrieve and replace with our malicious template document.
+
+Assume that we gonna use the document that we've have created in VBA Macro part above.
+
+I've added a line to pop-up a msgbox that tell us that our remote template injection is successful.
+
+![](2020-11-07-22-07-08.png)
+
+Save the file as Macro-Enabled Template `.dotm` format.
+
+Now, let's create a normal document using a free template from Microsoft Office. In my case, I'll using a free template named "Blue grey resume".
+
+![](2020-11-07-22-11-54.png)
+
+Then, save the document normally. Now we have the both documents.
+
+![](2020-11-07-22-13-40.png)
+
+Unzip the docx using decompress tool. In my case, I'll using 7zip.
+
+From here, we can start to see the files containing in the docx file.
+
+![](2020-11-07-22-17-21.png)
+
+Navigate to `word/_rels/` folder, and we can start modifying the content of `setting.xml.rels`.
+
+Replace the content of the attribute `Target` in the file `setting.xml.rels` with your remote document serve in your server.
+
+![](2020-11-07-22-19-51.png)
+
+Here my Kali box will serving the malicious template that we've created.
+
+![](2020-11-07-22-41-31.png)
+
+Replace the original link with our document link and save the file.
+
+![](2020-11-07-22-42-40.png)
+
+Now, compressed back all the files to a zip. Then change the `.zip` format to `.docx`.
+
+![](2020-11-07-22-28-01.png)
+
+![](2020-11-07-22-29-13.png)
+
+Now this document has contain the malicious remote template injection. Let's open the document.
+
+![](2020-11-07-22-31-32.png)
+
+Yeah, our remote template injection is running successfully.
+
+![](2020-11-07-22-43-55.png)
+
+
 
 # Excel4Macro
 
-# Template injection
+Let's dive into Excel 4.0 macros which also called XLM macros. Excel 4.0 macro can be difficult to analyse and detected by AV.
+
+Let's start create some XLM macro and execute our calc.exe!
+
+First step, create a new Excel workbook. Right click `Sheet1` at the bottom of the Excel and choose `Insert`.
+
+![](2020-11-07-16-29-34.png)
+
+A windows box will pop-up that allow us to choose which object we want to insert. Select `MS Excel 4.0 Macro` and click `OK`.
+
+![](2020-11-07-16-31-03.png)
+
+From here, let's start to write our own macro.
+
+Click on any cell and type the formulas shown in below picture.
+
+```
+=EXEC("calc.exe")
+=ALERT("Excel 4.0 Macro executed")
+=RETURN()
+```
+
+![](2020-11-07-16-33-46.png)
+
+On the name box at the top left, fill in `auto_open` to make our Excel 4.0 macro execute automatically when the workbook document is opened. It is similar to `Sub AutoOpen()` for VBA macros.
+
+![](2020-11-07-16-36-07.png)
+
+To test our macro, select all the macro and right click. Choose `Run` then click `Run` box at the left.
+
+![](2020-11-07-16-39-19.png)
+
+![](2020-11-07-16-40-09.png)
+
+Our macro will be execute right after we run the macro.
+
+![](2020-11-07-16-40-47.png)
+
+Also, we can hide our `macro` sheet by right click on the `Macro1` tab and select hidden.
+
+![](2020-11-07-16-43-37.png)
+
+Our macro sheet will be gone from the sight.
+
+![](2020-11-07-16-44-16.png)
+
+Now, let's save it as a file. You can choose either `.xls` and `.xlsm` format.
+
+Once user open the workbook and click `Enable Content`, our XLM macro will be execute successfully.
+
+![](2020-11-07-16-45-39.png)
+
+![](2020-11-07-16-45-56.png)
+
 
 # Inline Shapes
 
@@ -167,6 +280,10 @@ You can also use other payload command line like powershell etc.
 # RTF
 
 # OLE 
+
+# OLE + LNK
+
+# .SLK Excel
 
 # CVE-2012-0158
 

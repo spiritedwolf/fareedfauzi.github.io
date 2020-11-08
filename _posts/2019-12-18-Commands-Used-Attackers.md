@@ -229,7 +229,7 @@ Command  line examples:
     mshta.exe "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\Info.hta"
 
 ### msiexec
-Function: *//will be add later*
+Function: Provides the means to install, modify, and perform operations on Windows Installer from the command line.
 
 Command  line examples:
 
@@ -238,7 +238,7 @@ Command  line examples:
     msiexec /x "\\atbwfs100\Sourcing\Fit Tracking\03152007\FitTrackingUI.msi" /qn
 
 ### net
-Function: *//will be add later*
+Function: The net user command is used to add, delete, and otherwise manage the users on a computer. 
 
 Command  line examples:
 
@@ -251,7 +251,7 @@ Command  line examples:
     net stop osppsvc /y
 
 ### netsh
-Function: *//will be add later*
+Function: Netsh is a command-line scripting utility that allows you to display or modify the network configuration of a computer that is currently running.
 
 Command  line examples:
 
@@ -263,7 +263,7 @@ Command  line examples:
     netsh int tcp set heuristics disabled
 
 ### nslookup
-Function: *//will be add later*
+Function: Displays information that you can use to diagnose Domain Name System (DNS) infrastructure.
 
 Command  line examples:
 
@@ -272,14 +272,14 @@ Command  line examples:
     nslookup ransomware.bit ns1.wowservers.ru
 
 ### nssm.exe
-Function: *//will be add later*
+Function: Nssm.exe launches the Non-Sucking Service Manager program. This is not an essential Windows process and can be disabled if known to create problems. NSSM is a free utility that manages background and foreground services and processes. The program can be set to automatically restart failing services.
 
 Command  line examples:
 
     nssm.exe /install /silent "iSASService" %PROGRAMFILES%\Java\jre1.8.0_25\bin\java.exe
 
 ### ping
-Function: *//will be add later*
+Function: Computer network administration software utility used to test the reachability of a host on an Internet Protocol network.
 
 Command  line examples:
 
@@ -290,7 +290,7 @@ Command  line examples:
     ping google.com
 
 ### powershell.exe
-Function: *//will be add later*
+Function: PowerShell is a task automation and configuration management framework from Microsoft, consisting of a command-line shell and the associated scripting language.
 
 Command  line examples:
 
@@ -298,7 +298,7 @@ Command  line examples:
 
 
 ### reg
-Function: *//will be add later*
+Function: Performs operations on registry subkey information and values in registry entries. Some operations enable you to view or configure registry entries on local or remote computers, while others allow you to configure only local computers. Using reg to configure the registry of remote computers limits the parameters that you can use in some operations. 
 
 Command  line examples:
 
@@ -309,14 +309,14 @@ Command  line examples:
 
 
 ### regsvr32.exe
-Function: *//will be add later*
+Function: Regsvr32 is a command-line utility to register and unregister OLE controls, such as DLLs and ActiveX controls in the Windows Registry.
 
 Command  line examples:
 
     regsvr32.exe /n /s "%TEMP%\instx86.tmp" /i:"/cp"
 
 ### rundll32.exe
-Function: *//will be add later*
+Function: Loads and runs 32-bit dynamic-link libraries (DLLs).
 
 Command  line examples:
 
@@ -325,7 +325,7 @@ Command  line examples:
     rundll32.exe shell32.dll,Control_RunDLL input.dll
 
 ### sc.exe
-Function: *//will be add later*
+Function: Creates a subkey and entries for a service in the registry and in the Service Control Manager database.
 
 Command  line examples:
 
@@ -334,7 +334,7 @@ Command  line examples:
     sc.exe stop TeamViewer
 
 ### schtasks.exe
-Function: *//will be add later*
+Function: Schedules commands and programs to run periodically or at a specific time, adds and removes tasks from the schedule, starts and stops tasks on demand, and displays and changes scheduled tasks.
 
 Command  line examples:
 
@@ -353,7 +353,7 @@ Command  line examples:
     schtasks.exe schtasks /delete /tn SogouImeMgr /f
 
 ### shutdown
-Function: *//will be add later*
+Function: Enables you to shut down or restart local or remote computers, one at a time.
 
 Command  line examples:
 
@@ -366,14 +366,14 @@ Command  line examples:
 
 
 ### ssh-keygen.exe
-Function: *//will be add later*
+Function: The ssh-keygen utility is used to generate, manage, and convert authentication keys.
 
 Command  line examples:
 
     ssh-keygen.exe -b 1024 -t dsa -f /ssh_host_dsa_key -N ""
 
 ### subst.exe
-Function: *//will be add later*
+Function: Associates a path with a drive letter. If used without parameters, subst displays the names of the virtual drives in effect.
 
 Command  line examples:
 
@@ -381,7 +381,7 @@ Command  line examples:
 
 
 ### svchost.exe
-Function: *//will be add later*
+Function: Svchost.exe is a generic host process name for services that run from dynamic-link libraries.
 
 Command  line examples:
 
@@ -389,7 +389,7 @@ Command  line examples:
 
 
 ### takeown
-Function: *//will be add later*
+Function: Enables an administrator to recover access to a file that previously was denied, by making the administrator the owner of the file. This command is typically used on batch files.
 
 Command  line examples:
 
@@ -397,21 +397,21 @@ Command  line examples:
 
 
 ### taskkill
-Function: *//will be add later*
+Function: Ends one or more tasks or processes. Processes can be ended by process ID or image name. 
 
 Command  line examples:
 
     taskkill /im rundll32.exe /f /T
 
 ### tasklist
-Function: *//will be add later*
+Function: Displays a list of currently running processes on the local computer or on a remote computer.
 
 Command  line examples:
 
     tasklist /nh /fi "imagename eq .exe"
 
 ### timeout
-Function: *//will be add later*
+Function: Pauses the command processor for the specified number of seconds. 
 
 Command  line examples:
 
@@ -419,7 +419,7 @@ Command  line examples:
     timeout /t 300
 
 ### vbc.exe
-Function: *//will be add later*
+Function: Compile file to executable (.exe) files or dynamic-link library (.dll) files
 
 Command  line examples:
 
@@ -429,7 +429,7 @@ Command  line examples:
     vbc.exe /stext "%TEMP%\holdermail.txt"
 
 ### vssadmin
-Function: *//will be add later*
+Function: Displays current volume shadow copy backups and all installed shadow copy writers and providers. 
 
 Command  line examples:
 
@@ -438,14 +438,14 @@ Command  line examples:
     vssadmin resize shadowstorage /for=c: /on=c: /maxsize=unbounded
 
 ### wget.exe
-Function: *//will be add later*
+Function: Download file
 
 Command  line examples:
 
     wget.exe http://127.0.0.1:9527 -o "C:\\TestWget.txt" -t 1
 
 ### wmic
-Function: *//will be add later*
+Function: The WMI command-line (WMIC) utility provides a command-line interface for Windows Management Instrumentation (WMI).
 
 Command  line examples:
 
@@ -461,7 +461,7 @@ Command  line examples:
     wmic shadowcopy delete
 
 ### wscript
-Function: *//will be add later*
+Function: Windows Script Host provides an environment in which users can execute scripts in a variety of languages that use a variety of object models to perform tasks.
 
 Command  line examples:
 
@@ -471,7 +471,7 @@ Command  line examples:
     wscript bnbgpnhp.js
 
 ### xcopy
-Function: *//will be add later*
+Function: Copies files and directories, including subdirectories.
 
 Command  line examples:
 

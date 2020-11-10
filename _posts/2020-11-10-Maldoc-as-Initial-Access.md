@@ -278,6 +278,97 @@ Once user open the workbook and click `Enable Content`, our XLM macro will be ex
 
 ![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-07-16-45-56.png)
 
+# ACCDE executable
+
+This techniques was rare case and I found that there is no public research yet relate to this technique. I found this methodology were used by an attacker of my client during my analysis and investigation.
+
+Based on LifeWire A file with the ACCDE file extension is a Microsoft Access Execute Only Database file used to protect an ACCDB file. It replaces the MDE format (which secures an MDB file) used by older versions of MS Access.
+
+The VBA code in an ACCDE file is saved in a way that prevents anyone from seeing or changing it. When you save a Microsoft Access database to the ACCDE format, you can also choose to protect custom database code as well as to encrypt the entire file behind a password.
+
+So, long short story, analyst cannot be view the content of the VBA in .ACCDE file.
+
+Let's try create one.
+
+Open Microsoft Access and just use the blank one.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-30-02.png)
+
+Next, at the tab of Microsoft Office, navigate to `Create` tab and choose module to create our malicious VBA.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-31-47.png)
+
+In the `module1` opened by Access, here we can craft our vba payload in a function that we are about to create. In our case, pop-up a `calc.exe`.
+
+Here we declare a public function `popcalc()` and the command that we want to execute.
+
+```
+Public Function Test()
+    Shell ("cmd /c calc.exe")
+End Function
+```
+
+Then, save the Module with name `Module1` or anything name that you want.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-37-07.png)
+
+The next part is to create a macro that will execute our `Module1` once the document is open.
+
+Go to `Create` tab and Choose `Macro`.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-38-49.png)
+
+In the `Add New Action` box, choose `Run Code`
+ 
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-40-58.png)
+
+From here, type our Module1's function with `=` equal sign. You always need to type an equals sign (=) in front of the function name.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-43-37.png)
+
+Then save it with name `autoexec` to automatically run our VBA when this document opened by victim.
+
+CTRL+S and rename it.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-45-23.png)
+
+Then, save the Access database file (.accdb) and try to run it.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-48-21.png)
+
+The calc.exe was successfully run.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-49-04.png)
+
+Let's hide both of the Macros and Modules by `Right-Click` on the both Object, and choose `Object Properties`. Then, check `hidden` checkbox. Click `Apply`. Now, both of it will be hidden from clear viewers.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-51-25.png)
+
+
+But if you want to view it just `Right-click` in the box, choose `Navigation Options`. In the `Display Options` part, check the `Show Hidden Objects` checkbox and click `OK`.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-54-48.png)
+
+Ok now, let's save it as `.accde` executable.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-55-36.png)
+
+Let's execute our .accde file.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-55-57.png)
+
+We was welcomed by Microsoft Access Security Notice warning about the security concern. Just click `Open` and there you go!
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-58-36.png)
+
+Our command was succesfully executed!
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-16-59-19.png)
+
+As you can see, we can't view our `Module` in the `.accde` executable.
+
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-17-01-49.png)
+
 # Todo:
 
 - [ ] Inline Shapes

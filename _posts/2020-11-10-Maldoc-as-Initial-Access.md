@@ -8,7 +8,7 @@ categories:
 - Blog-post
 ---
 
-Generously, attacker will use these below techniques in leveraging Microrosft Office feature and vulnerabilities:
+Generally, attacker will use these below techniques in leveraging Microrosft Office feature and vulnerabilities:
 1. Exploits
 2. Macros
 3. Remote template injection

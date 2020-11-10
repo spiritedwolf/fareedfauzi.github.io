@@ -1,3 +1,13 @@
+---
+title: "Weaponization of Malicious document as Initial Access"
+date: "2020-11-08"
+layout: single
+tags:
+- Malware
+categories:
+- Blog-post
+---
+
 Generously, attacker will use these below techniques in leveraging Microrosft Office feature and vulnerabilities:
 1. Exploits
 2. Macros

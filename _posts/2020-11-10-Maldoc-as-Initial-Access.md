@@ -369,18 +369,76 @@ As you can see, we can't view our `Module` in the `.accde` executable.
 
 ![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-17-01-49.png)
 
-# Todo:
+# .SLK Excel
 
-- [ ] Inline Shapes
-- [ ] ACCDE executable
-- [ ] Embedded object
-- [ ] PPT Hover over
-- [ ] RTF
-- [ ] OLE 
-- [ ] OLE + LNK
-- [ ] .SLK Excel
-- [ ] CVE-2012-0158
-- [ ] CVE-2017-0199
-- [ ] CVE-2017-11826
-- [ ] CVE 2017-11882
+This study is based on [The MS Office Magic Show Stan Hegt Pieter Ceelen](https://www.youtube.com/watch?v=xY2DIRfqNvA) on SLK part. Do check out the video, it's awesome.
 
+First, let's create the `.slk` file using text editor and save it as `filename.slk`
+
+```
+ID;P
+O;E
+NN;NAuto_open;ER1C1;KOut Flank;F
+C;X1;Y1;K0;EEXEC("calc.exe")
+C;X1;Y2;K0;EHALT()
+E
+```
+
+You can learn what are the meanings of every lines in the above code from the video by Stan I mentioned.
+
+Here I saved it.
+
+![]https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-42-08.png)
+
+Let's open it and see what happen.
+
+![]https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-43-10.png)
+
+There is macro in there. If we click "Enable Content" button and we get our calc.exe!
+
+![]https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-47-26.png)
+
+# CVE-2017-0199
+
+Based on Fireeye, this vulnerability allows a malicious actor to download and execute a Visual Basic script containing PowerShell commands when a user opens a document containing an embedded exploit. 
+
+You can use [https://github.com/bhdresh/CVE-2017-0199](https://github.com/bhdresh/CVE-2017-0199) exploit toolkit for CVE-2017-0199
+
+# CVE-2012-0158
+
+Marta Janus from SecureList said that CVE-2012-0158 is a buffer overflow vulnerability in the ListView / TreeView ActiveX controls in the MSCOMCTL.OCX library. The malicious code can be triggered by a specially crafted DOC or RTF file for MS Office versions 2003, 2007 and 2010. Although this vulnerability was patched by Microsoft more than a year ago, it seems that not everyone cared to install the updates. And those who didn’t may be at risk of getting all their documents, pictures and databases encrypted by a new version of the Gimemo ransomware (detected by our products as Trojan-Ransom.Win32.Gimemo.beic).
+
+There is a Metasploit module for this vulnerability. Refer [https://www.exploit-db.com/exploits/18780](https://www.exploit-db.com/exploits/18780)
+
+# CVE-2017-8759
+
+As describe by Rapid7, this exploit is a remote code execution vulnerability exists when Microsoft .NET Framework processes untrusted input. An attacker who successfully exploited this vulnerability in software using the .NET framework could take control of an affected system. An attacker could then install programs; view, change, or delete data; or create new accounts with full user rights. Users whose accounts are configured to have fewer user rights on the system could be less impacted than users who operate with administrative user rights. To exploit the vulnerability, an attacker would first need to convince the user to open a malicious document or application. The security update addresses the vulnerability by correcting how .NET validates untrusted input. 
+
+Refer this sample exploit [https://github.com/Voulnet/CVE-2017-8759-Exploit-sample](https://github.com/Voulnet/CVE-2017-8759-Exploit-sample)
+
+
+# CVE 2017-11882
+This exploit triggers WebClient service to start and execute remote file from attacker-controlled WebDav server. The reason why this approach might be handy is a limitation of executed command length. However with help of WebDav it is possible to launch arbitrary attacker-controlled executable on vulnerable machine. This script creates simple document with several OLE objects. These objects exploits CVE-2017-11882, which results in sequential command execution. 
+
+Refer [https://github.com/embedi/CVE-2017-11882](https://github.com/embedi/CVE-2017-11882)
+
+Alternatively, we can use metasploit. Refer [here](https://www.rapid7.com/db/modules/exploit/windows/fileformat/office_ms17_11882)
+
+
+# Others cool techniques
+1. [The MS Office Magic Show Stan Hegt Pieter Ceelen](https://www.youtube.com/watch?v=xY2DIRfqNvA)
+    - VBA Stomping (remove vba code) but execute it with P-code
+    - Remote template injection ft HTML Smuggling
+    - .SLK Excel
+2. [Offensive Maldocs in 2020 | Joe Leon & Matt Grandy](https://www.youtube.com/watch?v=RW5U9yxilf4)
+    - XLM Macro
+    - PPT Hover Over
+    - Inline Shapes
+3. [Phishing with MS Office by Red Teaming Experiments](https://www.ired.team/offensive-security/initial-access/phishing-with-ms-office)
+4. [Office in Wonderland](https://www.youtube.com/watch?v=9ULzZA70Dzg&list=WL&index=3&t=1714s)
+    - CVE-2019-0540
+    - CVE-2019-0561
+    - VBA Stomping
+    - Hiding XLM macro with very hidden
+    - SLK Excel
+    - Excel 4.0 DCOM

@@ -388,15 +388,15 @@ You can learn what are the meanings of every lines in the above code from the vi
 
 Here I saved it.
 
-![]https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-42-08.png)
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-42-08.png)
 
 Let's open it and see what happen.
 
-![]https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-43-10.png)
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-43-10.png)
 
 There is macro in there. If we click "Enable Content" button and we get our calc.exe!
 
-![]https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-47-26.png)
+![](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/maldoc-weaponization/2020-11-10-22-47-26.png)
 
 # CVE-2017-0199
 

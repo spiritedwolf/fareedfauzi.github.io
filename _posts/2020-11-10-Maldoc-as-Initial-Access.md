@@ -11,8 +11,7 @@ categories:
 Generously, attacker will use these below techniques in leveraging Microrosft Office feature and vulnerabilities:
 1. Exploits
 2. Macros
-3. Embedded Object
-4. Remote injection
+3. Remote template injection
 and many more...
 
 In this post, we will learn various of techniques how to make a maldocs that can execute code (in our case, we will just run the `calc.exe`). 
@@ -23,6 +22,21 @@ You can always replace the `calc.exe` execution with any payload you want like *
 
 Claim: This is for education only as to understand how maldocs were created by the attacker out there. Do with your own risk.
 
+Table of content:
+1. [DDE Attack](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#dde-attack)
+2. [VBA Macro](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#vba-macro)
+3. [Remote Tempalate Injection](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#template-injection) 
+4. [Excel 4.0 Macro](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#excel4macro)
+5. [ACCDE executable](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#accde-executable)
+6. [.SLK Excel](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#slk-excel)
+7. [CVE-2017-0199](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#cve-2017-0199)
+8. [CVE-2012-0158](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#cve-2012-0158)
+9. [CVE-2017-8759](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#cve-2017-8759)
+10. [CVE 2017-11882](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#cve-2017-11882)
+11. [Others cool techniques](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#others-cool-techniques)
+
+
+accde-executable
 # DDE attack
 
 Let's start with the DDE attack. This attack was commonly use by attacker out there, where once a victim was phished by clicking the "yes" button in the Warning message by Office, they can immidiately being compromised by the attacker.

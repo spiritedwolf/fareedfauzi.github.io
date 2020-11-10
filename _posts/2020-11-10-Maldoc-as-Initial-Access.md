@@ -35,8 +35,6 @@ Table of content:
 10. [CVE 2017-11882](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#cve-2017-11882)
 11. [Others cool techniques](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#others-cool-techniques)
 
-
-accde-executable
 # DDE attack
 
 Let's start with the DDE attack. This attack was commonly use by attacker out there, where once a victim was phished by clicking the "yes" button in the Warning message by Office, they can immidiately being compromised by the attacker.

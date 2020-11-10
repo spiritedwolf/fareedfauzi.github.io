@@ -1,6 +1,6 @@
 ---
 title: "Weaponization of Malicious document as Initial Access"
-date: "2020-11-08"
+date: "2020-11-10"
 layout: single
 tags:
 - Malware

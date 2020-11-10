@@ -25,7 +25,7 @@ Claim: This is for education only as to understand how maldocs were created by t
 Table of content:
 1. [DDE Attack](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#dde-attack)
 2. [VBA Macro](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#vba-macro)
-3. [Remote Tempalate Injection](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#template-injection) 
+3. [Remote Template Injection](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#template-injection) 
 4. [Excel 4.0 Macro](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#excel4macro)
 5. [ACCDE executable](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#accde-executable)
 6. [.SLK Excel](https://fareedfauzi.github.io/blog-post/Maldoc-as-Initial-Access/#slk-excel)

@@ -442,7 +442,7 @@ Alternatively, we can use metasploit. Refer [here](https://www.rapid7.com/db/mod
     - VBA Stomping (remove vba code) but execute it with P-code
     - Remote template injection ft HTML Smuggling
     - .SLK Excel
-2. [Offensive Maldocs in 2020 | Joe Leon & Matt Grandy](https://www.youtube.com/watch?v=RW5U9yxilf4)
+2. [Offensive Maldocs in 2020 Joe Leon & Matt Grandy](https://www.youtube.com/watch?v=RW5U9yxilf4)
     - XLM Macro
     - PPT Hover Over
     - Inline Shapes

